@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap");
+* {
+  font-family: "Montserrat", serif;
+}
+
 .flex {
   display: flex;
 }
@@ -12,6 +17,19 @@
 
 .gap1rem {
   gap: 1rem;
+}
+
+.mobile-only {
+  display: block;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.header-button {
+  height: 50px;
+  padding: 10px;
 }
 
 header {
@@ -29,11 +47,41 @@ header nav ul li i {
   font-size: 25px;
 }
 
-main img {
+main {
+  max-width: 1000px;
+  justify-content: center;
+}
+main section {
+  position: relative;
+  width: 100%;
+}
+main section img {
   width: 100%;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
+}
+main section article {
+  width: 80%;
+  height: 50px;
+  background-color: white;
+  position: absolute;
+  top: 20px;
+}
+
+@media (min-width: 1000px) {
+  .mobile-only {
+    display: none;
+  }
+  .desktop-only {
+    display: block;
+  }
+  header nav ul li i {
+    font-size: 25px;
+  }
+  main {
+    max-width: 1400px;
+  }
 }/*# sourceMappingURL=style.css.map */
