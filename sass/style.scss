@@ -1,6 +1,17 @@
 //har skjekket på youtube hvordan kan jeg importere google font: youtube video ligger i referancen
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap");
 
+//Jeg spurte chagpt at hvordan kan jeg lage farge variabel
+:root {
+  --lightblue: #52d3f0;
+  --floweryellow: #ffcf40;
+  --oceanblue: #1ca2c1;
+  --black: #252525;
+  --bonewhite: #e8e8e8;
+  --minecraftgreen: #019101;
+  --white: #f6f5f2;
+}
+
 * {
   font-family: "Montserrat", serif;
 }
@@ -32,6 +43,15 @@
 .header-button {
   height: 50px;
   padding: 10px;
+  border: 2px solid var(--oceanblue);
+  border-radius: 25px;
+  background-color: white;
+  color: var(--oceanblue);
+}
+
+.header-button:hover{
+    background-color: var(--oceanblue);
+    color: var(--white);
 }
 
 //main html styles here
@@ -49,6 +69,7 @@ header {
   }
   nav {
     ul {
+      align-items: center;
       li {
         i {
           font-size: 25px;
@@ -89,6 +110,9 @@ main {
   .desktop-only {
     display: block;
   }
+  .flex.desktop-only{
+    display: flex;
+}
   header {
     nav {
       ul {
@@ -96,12 +120,20 @@ main {
           i {
             font-size: 25px;
           }
+          a {
+            text-decoration: none;
+            color: black;
+            font-weight: bolder;
+          }
+          a:hover{
+            text-decoration: underline
+          }
         }
       }
     }
   }
 
-  main{
+  main {
     max-width: 1400px;
   }
 }

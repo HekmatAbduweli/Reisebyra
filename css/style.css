@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap");
+:root {
+  --lightblue: #52d3f0;
+  --floweryellow: #ffcf40;
+  --oceanblue: #1ca2c1;
+  --black: #252525;
+  --bonewhite: #e8e8e8;
+  --minecraftgreen: #019101;
+  --white: #f6f5f2;
+}
+
 * {
   font-family: "Montserrat", serif;
 }
@@ -30,6 +40,15 @@
 .header-button {
   height: 50px;
   padding: 10px;
+  border: 2px solid var(--oceanblue);
+  border-radius: 25px;
+  background-color: white;
+  color: var(--oceanblue);
+}
+
+.header-button:hover {
+  background-color: var(--oceanblue);
+  color: var(--white);
 }
 
 header {
@@ -42,6 +61,9 @@ header a {
 }
 header a img {
   width: 100%;
+}
+header nav ul {
+  align-items: center;
 }
 header nav ul li i {
   font-size: 25px;
@@ -78,8 +100,19 @@ main section article {
   .desktop-only {
     display: block;
   }
+  .flex.desktop-only {
+    display: flex;
+  }
   header nav ul li i {
     font-size: 25px;
+  }
+  header nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+  }
+  header nav ul li a:hover {
+    text-decoration: underline;
   }
   main {
     max-width: 1400px;
