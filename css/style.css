@@ -13,16 +13,30 @@
   font-family: "Montserrat", serif;
 }
 
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .flex {
   display: flex;
 }
 
-.padding0 {
-  padding: 0;
-}
-
-.none-list {
-  list-style: none;
+.grid {
+  display: grid;
 }
 
 .gap1rem {
@@ -39,7 +53,7 @@
 
 .header-button {
   height: 50px;
-  padding: 10px;
+  padding: 5px 10px;
   border: 2px solid var(--oceanblue);
   border-radius: 25px;
   background-color: white;
@@ -51,22 +65,38 @@
   color: var(--white);
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
 header {
-  justify-content: space-between;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  padding: 10px 20px;
 }
 header a {
-  width: 50px;
+  grid-column: 1/2;
 }
 header a img {
-  width: 100%;
+  width: 70px;
+}
+header nav {
+  grid-column: 3/4;
+  margin-right: 20px;
 }
 header nav ul {
   align-items: center;
+  justify-content: space-between;
 }
 header nav ul li i {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 main {
@@ -93,6 +123,68 @@ main section article {
   top: 20px;
 }
 
+footer {
+  margin-top: auto;
+  background-color: var(--black);
+  color: var(--bonewhite);
+  justify-content: center;
+  padding: 20px;
+}
+footer section {
+  margin-bottom: 20px;
+}
+footer .flagg-seksjon {
+  justify-content: center;
+}
+footer .flagg-seksjon ul {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+footer .flagg-seksjon ul li {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  gap: 1rem;
+}
+footer .flagg-seksjon ul li img {
+  width: 30px;
+}
+footer .betalingsmetoder figure {
+  margin: 0;
+}
+footer .betalingsmetoder figure i {
+  font-size: 30px;
+  padding: 0 5px;
+}
+footer .nyheter form {
+  display: inline-block;
+}
+footer .nyheter form fieldset {
+  padding: 20px 10px;
+  display: inline-block;
+  border: 2px solid var(--white);
+}
+footer .nyheter form fieldset input {
+  padding: 7px 5px;
+  border-radius: 10px;
+  margin: 0 2px;
+}
+footer .nyheter form fieldset input[type=submit] {
+  background-color: var(--floweryellow);
+}
+footer .kundeservice ul li {
+  margin: 4px 0;
+}
+footer .kundeservice ul li a {
+  color: var(--white);
+}
+footer .sosialemedier ul li a {
+  color: var(--white);
+}
+footer .sosialemedier ul li a i {
+  font-size: 30px;
+}
+
 @media (min-width: 1000px) {
   .mobile-only {
     display: none;
@@ -103,18 +195,37 @@ main section article {
   .flex.desktop-only {
     display: flex;
   }
+  header {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  header a img {
+    width: 120px;
+  }
   header nav ul li i {
     font-size: 25px;
   }
-  header nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bolder;
-  }
-  header nav ul li a:hover {
-    text-decoration: underline;
-  }
   main {
     max-width: 1400px;
+  }
+  footer {
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "flag flag flag flag" "betalingsmetoder nyhet kundeservice sms";
+  }
+  footer .item1 {
+    grid-area: flag;
+  }
+  footer .item2 {
+    grid-area: betalingsmetoder;
+  }
+  footer .item3 {
+    grid-area: nyhet;
+  }
+  footer .item4 {
+    grid-area: kundeservice;
+  }
+  footer .item5 {
+    grid-area: sms;
   }
 }/*# sourceMappingURL=style.css.map */

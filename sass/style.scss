@@ -16,18 +16,32 @@
   font-family: "Montserrat", serif;
 }
 
-//css class for common use
+//css tag og class for common use
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 .flex {
   display: flex;
 }
 
-.padding0 {
-  padding: 0;
+.grid {
+  display: grid;
 }
 
-.none-list {
-  list-style: none;
-}
 .gap1rem {
   gap: 1rem;
 }
@@ -42,37 +56,53 @@
 
 .header-button {
   height: 50px;
-  padding: 10px;
+  padding: 5px 10px;
   border: 2px solid var(--oceanblue);
   border-radius: 25px;
   background-color: white;
   color: var(--oceanblue);
 }
 
-.header-button:hover{
-    background-color: var(--oceanblue);
-    color: var(--white);
+.header-button:hover {
+  background-color: var(--oceanblue);
+  color: var(--white);
 }
 
 //main html styles here
 
+//har letet etter hvordan kan jeg sette footer på bunnen fast og fant youtube video forteller hvordan man gjør det lenken ligger i referance"sticky footer"
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
 header {
-  justify-content: space-between;
+  //her lagde jeg grid funksjon ved å se på youtube video handler om grid video lenken ligger i kilde seksjon i rapport
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  padding: 10px 20px;
   a {
-    width: 50px;
+    grid-column: 1/2;
 
     img {
-      width: 100%;
+      width: 70px;
     }
   }
   nav {
+    grid-column: 3/4;
+    margin-right: 20px;
     ul {
       align-items: center;
+      justify-content: space-between;
       li {
         i {
-          font-size: 25px;
+          font-size: 20px;
         }
       }
     }
@@ -103,6 +133,87 @@ main {
   }
 }
 
+footer {
+  margin-top: auto;
+  background-color: var(--black);
+  color: var(--bonewhite);
+  justify-content: center;
+  padding: 20px;
+  section {
+    margin-bottom: 20px;
+  }
+
+  .flagg-seksjon {
+    justify-content: center;
+    ul {
+      flex-wrap: wrap;
+      justify-content: center;
+      li {
+        display: flex;
+        align-items: center;
+        margin: 5px;
+        gap: 1rem;
+        img {
+          width: 30px;
+        }
+      }
+    }
+  }
+  .betalingsmetoder {
+    figure {
+      margin: 0;
+      i {
+        font-size: 30px;
+        padding: 0 5px;
+      }
+    }
+  }
+
+  .nyheter {
+    form {
+      //spurte chatgpt hvordan kan jeg ha en brett som fits perfectly så brede som innholde inne i og han sa om å bruke inline-block
+      display: inline-block;
+      fieldset {
+        padding: 20px 10px;
+        display: inline-block;
+        border: 2px solid var(--white);
+        input {
+          padding: 7px 5px;
+          border-radius: 10px;
+          margin: 0 2px;
+        }
+        input[type="submit"] {
+          background-color: var(--floweryellow);
+        }
+      }
+    }
+  }
+
+  .kundeservice {
+    ul {
+      li {
+        margin: 4px 0;
+        a {
+          color: var(--white);
+        }
+      }
+    }
+  }
+
+  .sosialemedier {
+    ul {
+      li {
+        a {
+          color: var(--white);
+          i {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 1000px) {
   .mobile-only {
     display: none;
@@ -110,23 +221,23 @@ main {
   .desktop-only {
     display: block;
   }
-  .flex.desktop-only{
+  //spurte chatgpt hvordan kan jeg ha display flex for tag som har class desktoponly siden desktoponly er satt opp med block. og chatgpt ambefalte det her.
+  .flex.desktop-only {
     display: flex;
-}
+  }
   header {
+    width: 100%;
+    box-sizing: border-box;
+    a {
+      img {
+        width: 120px;
+      }
+    }
     nav {
       ul {
         li {
           i {
             font-size: 25px;
-          }
-          a {
-            text-decoration: none;
-            color: black;
-            font-weight: bolder;
-          }
-          a:hover{
-            text-decoration: underline
           }
         }
       }
@@ -135,5 +246,30 @@ main {
 
   main {
     max-width: 1400px;
+  }
+
+  footer {
+    //her lagde jeg også grid funksjon ved å se på youtube video handler om grid video lenken ligger i kilde seksjon i rapport
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "flag flag flag flag"
+      "betalingsmetoder nyhet kundeservice sms";
+
+    .item1 {
+      grid-area: flag;
+    }
+    .item2 {
+      grid-area: betalingsmetoder;
+    }
+    .item3 {
+      grid-area: nyhet;
+    }
+    .item4 {
+      grid-area: kundeservice;
+    }
+    .item5 {
+      grid-area: sms;
+    }
   }
 }
