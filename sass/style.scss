@@ -7,13 +7,15 @@
   --floweryellow: #ffcf40;
   --oceanblue: #1ca2c1;
   --black: #252525;
-  --bonewhite: #e8e8e8;
+  --lightgray: #e8e8e8;
   --minecraftgreen: #019101;
   --white: #f6f5f2;
 }
 
 * {
   font-family: "Montserrat", serif;
+  //spurte chatgpt hvordan kan jeg unngå å overflyte header og reklameskilt og chatgpt ambefalte bo-sizing border-box
+  box-sizing: border-box;
 }
 
 //css tag og class for common use
@@ -68,7 +70,7 @@ a:hover {
   color: var(--white);
 }
 
-//main html styles here
+//hoved felles html styles her
 
 //har letet etter hvordan kan jeg sette footer på bunnen fast og fant youtube video forteller hvordan man gjør det lenken ligger i referance"sticky footer"
 html {
@@ -111,24 +113,157 @@ header {
 
 main {
   max-width: 1000px;
+  margin: auto;
+  max-width: 1000px;
   justify-content: center;
+  flex-direction: column;
   section {
-    position: relative;
     width: 100%;
+  }
+}
 
-    img {
-      width: 100%;
-      height: 200px;
-      //her har jeg brukt chatgpt. spurte hvordan kan jeg sette på et bestemt området i bildet
-      object-fit: cover;
-      object-position: 50% 50%;
-    }
-    article {
-      width: 80%;
-      height: 50px;
+//for forside
+.forside {
+  #sea-image {
+    width: 100%;
+    height: 300px;
+    background-image: url(../img/sea-4768869_1920.jpg);
+    //her har jeg brukt chatgpt. spurte hvordan kan jeg sette på et bestemt området i bakgrunns bildet
+    object-fit: cover;
+    background-position: 30% 30%;
+    background-repeat: no-repeat;
+  }
+  main {
+    .bestilling-form {
       background-color: white;
-      position: absolute;
-      top: 20px;
+      width: 90%;
+      margin: -250px auto 20px;
+      padding: 10px;
+      border-radius: 10px;
+      //søkte "box shadow custom" og fant boxshadow code generator og brukte den
+      box-shadow: 0px 0px 3px 3px var(--lightgray);
+
+      nav {
+        ul {
+          //jeg brukte min gamle nettside som var i host på itsud for å se hvordan jeg lagde side scroll funksjon
+          overflow: auto;
+          white-space: nowrap;
+          margin: 10px 5px;
+          li {
+            padding: 3px;
+            .selected {
+              //jeg brukte kode fra css trick for å skjekke hvordan man kan lage tykkere understrek
+              border-bottom: 3px solid var(--oceanblue);
+            }
+          }
+        }
+      }
+      form {
+        flex-direction: column;
+        gap: 10px;
+        fieldset {
+          select,
+          input {
+            border: none;
+            width: 100%;
+            font-size: 20px;
+            color: gray;
+          }
+        }
+        button {
+          width: 100%;
+          border-radius: 5px;
+          background-color: var(--floweryellow);
+          border: none;
+          font-size: 20px;
+          padding: 10px;
+        }
+      }
+    }
+    .reklameskilt {
+      flex-direction: column;
+      justify-content: center;
+      background-image: url(../img/holiday-2733322_1280.jpg);
+      background-size: cover;
+      height: 300px;
+      border-radius: 10px;
+      padding: 20px;
+      article {
+        background-color: var(--lightblue);
+        //søkte "border radius only top" og fant løsning i stackoverflow
+        -moz-border-radius: 0px;
+        -webkit-border-radius: 0px 10px;
+        border-radius: 0px 10px;
+        padding: 20px;
+        margin: 10px 0;
+        display: inline-block;
+        strong {
+          font-size: 30px;
+          font-weight: bolder;
+        }
+      }
+      button {
+        padding: 10px 5px;
+        font-size: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--floweryellow);
+      }
+    }
+    .tilbudseksjon {
+      grid-template-columns: repeat(3, 1fr);
+      margin: 20px auto;
+      width: 90%;
+      overflow: auto;
+      white-space: nowrap;
+      padding: 30px 5px;
+      article {
+        width: auto;
+        height: 150px;
+        box-shadow: 0px 0px 10px 5px var(--lightgray);
+        padding: 15px;
+        border-radius: 10px;
+      }
+    }
+    .tips-inspirasjon {
+      width: 90%;
+      margin: 20px auto;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-rows: repeat(2, 1fr);
+      gap: 1rem 1rem;
+      article {
+        justify-self: center;
+        align-self: stretch;
+        box-shadow: 0px 0px 10px 5px var(--lightgray);
+        border: none;
+        border-radius: 10px;
+        //Jeg kunne ikke ha rundt på kant på border på toppen. så viste jeg koden til tips-insipirasjon seksjons kode og css til chatgpt og han ambefalte meg å legge overflow hidden
+        overflow: hidden;
+        padding-bottom: 5px;
+        margin: auto;
+        figure {
+          position: relative;
+          margin: 0;
+          img {
+            width: 100%;
+          }
+          span {
+            position: absolute;
+            left: 0;
+            padding: 10px;
+            background-color: var(--oceanblue);
+            color: var(--white);
+            border-radius: 0 0 20px 0;
+          }
+        }
+        h3,
+        p {
+          margin: 10px 10px 20px;
+        }
+        a {
+          border-bottom: 4px solid var(--oceanblue);
+        }
+      }
     }
   }
 }
@@ -136,7 +271,7 @@ main {
 footer {
   margin-top: auto;
   background-color: var(--black);
-  color: var(--bonewhite);
+  color: var(--lightgray);
   justify-content: center;
   padding: 20px;
   section {
@@ -227,7 +362,6 @@ footer {
   }
   header {
     width: 100%;
-    box-sizing: border-box;
     a {
       img {
         width: 120px;
@@ -244,8 +378,53 @@ footer {
     }
   }
 
-  main {
-    max-width: 1400px;
+  .forside {
+    #sea-image {
+      height: 150px;
+    }
+    main {
+      max-width: 1400px;
+      .bestilling-form {
+        margin: -80px auto 20px;
+        form {
+          flex-direction: row;
+          fieldset {
+            border-radius: 10px;
+            input[type="number"],
+            [type="date"] {
+              width: 150px;
+            }
+          }
+          .colum {
+            gap: 10px;
+            fieldset {
+              select {
+                width: 200px;
+              }
+            }
+          }
+          button {
+            width: 300px;
+          }
+        }
+      }
+      .reklameskilt {
+        align-items: flex-end;
+        background-position: 50%;
+        article {
+          width: 600px;
+          height: 300px;
+        }
+      }
+      .tilbudseksjon {
+        width: 100%;
+      }
+      .tips-inspirasjon {
+        width: 100%;
+        //Jeg fortalte til chatgpt at jeg trengte "grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));" for å sette artikkelen til neste kolum når bretten blir mindre og fortalte og spurte at jeg trenger også sette begrensninger til tre på row og hvordan kan jeg nå målet mitt og chatgpt ambetfalte å lage en ny grid-area-colum på media query
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
   }
 
   footer {

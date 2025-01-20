@@ -32,14 +32,167 @@
             </ul>
         </nav>
     </header>
-    <main class="flex">
-        <section>
-            <img src="./img/sea-4768869_1920.jpg" alt="sea image">
-            <article>
 
-            </article>
-        </section>
-    </main>
+
+
+    <div class="contaner forside">
+        <div id="sea-image"></div>
+        <main class="flex">
+            <section class="bestilling-form">
+                <nav>
+                    <ul class="flex gap1rem">
+                        <li><a href="#" class="selected"><i class="fa-solid fa-suitcase"></i>Fly + Hotell</a></li>
+                        <li><a href="#"><i class="fa-solid fa-plane"></i>Fly</a></li>
+                        <li><a href="#"><i class="fa-solid fa-city"></i>Storby</a></li>
+                        <li><a href="#"><i class="fa-solid fa-person-skiing"></i>Ski</a></li>
+                        <li><a href="#"><i class="fa-solid fa-map-location-dot"></i>Kombinasjonsreiser</a></li>
+                    </ul>
+                </nav>
+                <form action="submit" class="flex">
+                    <fieldset>
+                        <legend>Fra</legend>
+                        <select name="sted" id="fra">
+                            <option value="OSL">Oslo Lufthavn</option>
+                            <option value="NRT">Narita International Airport</option>
+                            <option value="FRA">Frankfurt Airport</option>
+                            <option value="LAX">Los Angeles International Airport</option>
+                            <option value="IST">Istanbul Airport</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Til</legend>
+                        <select name="sted" id="til">
+                            <option value="OSL">Oslo Lufthavn</option>
+                            <option value="NRT">Narita International Airport</option>
+                            <option value="FRA">Frankfurt Airport</option>
+                            <option value="LAX">Los Angeles International Airport</option>
+                            <option value="IST">Istanbul Airport</option>
+                        </select>
+                    </fieldset>
+                    <div class="flex colum">
+                        <fieldset>
+                            <legend>Reiselengde</legend>
+                            <select name="periode" id="reiselengde">
+                                <option value="Suke">Mindre enn en uke</option>
+                                <option value="enuke">En uke</option>
+                                <option value="touke">To uker</option>
+                                <option value="Muke">Mer enn to uker</option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Velg dato</legend>
+                            <input type="date">
+                        </fieldset>
+                    </div>
+                    <fieldset>
+                        <legend>Antall reisende</legend>
+                        <input type="number" value="1">
+                    </fieldset>
+                    <button>Søk</button>
+                </form>
+            </section>
+
+            <section class="reklameskilt flex">
+                <article>
+                    <h1>Bestill sommerens beste uke</h1>
+                    <p>Fly + hotell, 7 dager</p>
+                    <strong>Fra 3298,-</strong>
+                </article>
+                <button>Bestill idag</button>
+            </section>
+            <section class="tilbudseksjon grid gap1rem">
+                <article>
+                    <h2>Få eksklusive tilbud</h2>
+                    <br>
+                    <a href="#">Logg inn/ Oprett konto og få rabattkorter <i class="fa-solid fa-angles-right"></i></a>
+                </article>
+                <article>
+                    <h2>Bestille resteplasser</h2>
+                    <br>
+                    <a href="#">Opptil 50% rabatt<i class="fa-solid fa-angles-right"></i></a>
+                </article>
+                <article>
+                    <h2>Mars - spar opp til 5000,-</h2>
+                    <br>
+                    <a href="#">Sikre deg et ferie kupp<i class="fa-solid fa-angles-right"></i></a>
+                </article>
+            </section>
+            <section class="tips-inspirasjon grid">
+                <article>
+                    <figure>
+                        <img src="./img/beach-6514331_640.jpg" alt="beach1">
+                        <span>Ukens Deal</span>
+                    </figure>
+                    <h3>Greske favoritter</h3>
+                    <p>Akkuratt nå får du 1000,- i rabatt per bestilling til bl.a Parga, Sivota, Lefkas, Korfu og Kalamata i Hellas. Gjelder avreise i sommer 2025. Kampanjen er gyldig i perioden 3/1-12/1-25. Bruk rabattkode WEEKDEAL ved bestilling.
+                    </p>
+                    <a href="#">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+                <article>
+                    <figure>
+                        <img src="./img/beach-6514331_640.jpg" alt="beach1">
+                    </figure>
+                    <h3>Greske favoritter</h3>
+                    <p>Akkuratt nå får du 1000,- i rabatt per bestilling til bl.a Parga, Sivota, Lefkas, Korfu og Kalamata i Hellas.
+                        Gjelder avreise i sommer 2025. Kampanjen er gyldig i perioden 3/1-12/1-25. Bruk rabattkode WEEKDEAL ved
+                        bestilling.
+                    </p>
+                    <a href="#">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+                <article>
+                    <figure>
+                        <img src="./img/beach-6514331_640.jpg" alt="beach1">
+                    </figure>
+                    <h3>Greske favoritter</h3>
+                    <p>Akkuratt nå får du 1000,- i rabatt per bestilling til bl.a Parga, Sivota, Lefkas, Korfu og Kalamata i Hellas.
+                        Gjelder avreise i sommer 2025. Kampanjen er gyldig i perioden 3/1-12/1-25. Bruk rabattkode WEEKDEAL ved
+                        bestilling.
+                    </p>
+                    <a href="#">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+                <article>
+                    <figure>
+                        <img src="./img/beach-6514331_640.jpg" alt="beach1">
+                    </figure>
+                    <h3>Greske favoritter</h3>
+                    <p>Akkuratt nå får du 1000,- i rabatt per bestilling til bl.a Parga, Sivota, Lefkas, Korfu og Kalamata i Hellas.
+                        Gjelder avreise i sommer 2025. Kampanjen er gyldig i perioden 3/1-12/1-25. Bruk rabattkode WEEKDEAL ved
+                        bestilling.
+                    </p>
+                    <a href="#">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+                <article>
+                    <figure>
+                        <img src="./img/beach-6514331_640.jpg" alt="beach1">
+                        <span>Ukens Deal</span>
+                    </figure>
+                    <h3>Greske favoritter</h3>
+                    <p>Akkuratt nå får du 1000,- i rabatt per bestilling til bl.a Parga, Sivota, Lefkas, Korfu og Kalamata i Hellas.
+                        Gjelder avreise i sommer 2025. Kampanjen er gyldig i perioden 3/1-12/1-25. Bruk rabattkode WEEKDEAL ved
+                        bestilling.
+                    </p>
+                    <a href="#">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+                <article>
+                    <figure>
+                        <img src="./img/beach-6514331_640.jpg" alt="beach1">
+                    </figure>
+                    <h3>Greske favoritter</h3>
+                    <p>Akkuratt nå får du 1000,- i rabatt per bestilling til bl.a Parga, Sivota, Lefkas, Korfu og Kalamata i Hellas.
+                        Gjelder avreise i sommer 2025. Kampanjen er gyldig i perioden 3/1-12/1-25. Bruk rabattkode WEEKDEAL ved
+                        bestilling.
+                    </p>
+                    <a href="#">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+            </section>
+        </main>
+    </div>
+
+
+
+
+
     <footer class="grid">
         <section class="flagg-seksjon flex item1">
             <ul class="flex">

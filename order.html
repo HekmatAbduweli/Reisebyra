@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/a45519f1c1.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="grid">
+        <a href="index.html">
+            <img src="./img/fav.png" alt="fly icon">
+        </a>
+        <nav>
+            <ul class="flex gap1rem">
+                <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                <li class="mobile-only"><i class="fa-regular fa-circle-user"></i></li>
+                <li class="mobile-only"><i class="fa-solid fa-bars"></i></li>
+                <li class="desktop-only"><button class="header-button">Oprett en konto</button></li>
+                <li class="desktop-only"><button class="header-button"><i class="fa-regular fa-circle-user"></i> Min
+                        side</button>
+                </li>
+            </ul>
+            <ul class="desktop-only flex gap1rem">
+                <li><a href="#">Tips og inspirasjon</a></li>
+                <li><a href="#">Hotell</a></li>
+                <li><a href="#">Fly</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <img src="./img/sea-4768869_1920.jpg" alt="sea image">
+    <main class="flex">
+        <section>
+
+            <article>
+
+            </article>
+        </section>
+    </main>
+    <footer class="grid">
+        <section class="flagg-seksjon flex item1">
+            <ul class="flex">
+                <li><img src="./flags/sweden.png" alt="Sverige"><span>Sverige</span></li>
+                <li><img src="./flags/denmark.png" alt="Danmark"><span>Danmark</span></li>
+                <li><img src="./flags/norway.png" alt="Norge"><span>Norge</span></li>
+                <li><img src="./flags/material.png" alt="Suomi"><span>Suomi</span></li>
+                <li><img src="./flags/netherlands.png" alt="Nederland"><span>Nederland</span></li>
+            </ul>
+        </section>
+        <section class="betalingsmetoder item2">
+            <h3>Betalingsmetoder</h3>
+            <!-- spurte chatgpt om jeg kan sette iconer inne i figure tag og karen sa "ye det funker" -->
+            <figure>
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-cc-paypal"></i>
+                <i class="fa-brands fa-cc-apple-pay"></i>
+                <i class="fa-brands fa-cc-amazon-pay"></i>
+            </figure>
+        </section>
+        <section class="nyheter item3">
+            <h3>
+                Nyheter & Tilbud
+            </h3>
+            <form action="submit">
+                <fieldset>
+                    <legend>Meld deg på nyhetsbrev her</legend>
+                    <input type="email" placeholder="example@mail.com"><input type="submit" value="Send">
+                </fieldset>
+            </form>
+            <p>Kjøp gavekort</p>
+        </section>
+        <section class="kundeservice item4">
+            <h3>Kundeservice</h3>
+            <ul>
+                <li><a href="#">Spørsmål og svar</a></li>
+                <li><a href="#">Chat</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Tilgjengelihets</a></li>
+            </ul>
+        </section>
+        <section class="sosialemedier item5">
+            <h3>Sociale medier</h3>
+            <ul class="flex gap1rem">
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </section>
+    </footer>
+</body>
+
+</html>
