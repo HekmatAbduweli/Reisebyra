@@ -114,7 +114,6 @@ header {
 main {
   max-width: 1000px;
   margin: auto;
-  max-width: 1000px;
   justify-content: center;
   flex-direction: column;
   section {
@@ -131,7 +130,6 @@ main {
     //her har jeg brukt chatgpt. spurte hvordan kan jeg sette på et bestemt området i bakgrunns bildet
     object-fit: cover;
     background-position: 30% 30%;
-    background-repeat: no-repeat;
   }
   main {
     .bestilling-form {
@@ -228,6 +226,7 @@ main {
     .tips-inspirasjon {
       width: 90%;
       margin: 20px auto;
+      //glemte å rapportere før jeg pusherut, men her brukte jeg grid youtube video til å vite hvordan kan jeg sette artikkelen til ny kolonne av seg selv når bretten til websiden blir mindre.(jeg hadde sett helevideo før jeg har startet denne oppgaven så jeg viste at det finnes tutorial på denne videoen )
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       grid-template-rows: repeat(2, 1fr);
       gap: 1rem 1rem;
@@ -262,6 +261,59 @@ main {
         }
         a {
           border-bottom: 4px solid var(--oceanblue);
+        }
+      }
+    }
+  }
+}
+
+.hotellside {
+  main {
+    //jeg insipierte fra oblig 3 nettside jeg lagde du kan se via å scrolle på side sko bildene
+    .image-gallery {
+      display: flex;
+      overflow-x: auto;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      figure {
+        //jeg har letet etter hvordan kan jeg justere høyden automatisk sammen med bredden og fant en youtube video handler om css høyde lenken ligger i rapport
+        height: auto;
+        margin: 0;
+        //når jeg brukte display flex alle figure taggen ble squiza inne i image-gallery istedenfor å over flyte fra bretten til skjermen selv om jeg hadde oerflov-x auto.
+        //jeg har gitt hele css og html koden til chatgpt og spurte hvordan kan jeg sette bildet uten å bli squiza og la den overflyte
+        //chat gpt ambefalte meg å bruke flex 0 0 100% inne i figure og den funka.
+        flex: 0 0 100%;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .absolute{
+        position: absolute;
+        margin: 5px;
+      }
+      // jeg klarte ikke sette disse to på riktig posisjon med top og left og googla jeg absolute position right og fant at man kan bruke metode "right" via w3school. kilde ligger i rapport
+      button{
+        right: 10px;
+        top: 10px;
+        border: none;
+        background-color: var(--white);
+        border-radius: 25px;
+        font-size: 20px;
+        padding: 5px 7px;
+      }
+      span{
+        right: 10px;
+        bottom: 10px;
+        background-color: var(--black);
+        color: var(--white);
+        opacity: 0.4;
+        padding: 5px;
+        border-radius: 25px;
+        i{
+          padding-right: 5px;
         }
       }
     }
@@ -378,12 +430,15 @@ footer {
     }
   }
 
+  main{
+    max-width: 1400px;
+  }
+
   .forside {
     #sea-image {
       height: 150px;
     }
     main {
-      max-width: 1400px;
       .bestilling-form {
         margin: -80px auto 20px;
         form {
@@ -423,6 +478,32 @@ footer {
         width: 100%;
         //Jeg fortalte til chatgpt at jeg trengte "grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));" for å sette artikkelen til neste kolum når bretten blir mindre og fortalte og spurte at jeg trenger også sette begrensninger til tre på row og hvordan kan jeg nå målet mitt og chatgpt ambetfalte å lage en ny grid-area-colum på media query
         grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+
+  .hotellside{
+    main{
+      .image-gallery{
+        //her insipirerte fra gird video fra youtube
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1rem;
+
+        .big-image1{
+          grid-column: 1/3;
+          grid-row: 1/3;
+        }
+
+        .big-image2{
+          grid-column: 3/5;
+          grid-row: 2/4;
+        }
+
+        figure{
+          height: auto;
+        }
       }
     }
   }
