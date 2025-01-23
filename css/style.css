@@ -66,6 +66,26 @@ a:hover {
   color: var(--white);
 }
 
+.box-shadow {
+  box-shadow: 0px 0px 10px 5px var(--lightgray);
+}
+
+.paragraph span {
+  margin-right: 5px;
+}
+
+.blo-link {
+  color: var(--oceanblue);
+  font-size: small;
+}
+
+.rate-box {
+  padding: 3px 5px;
+  color: white;
+  background-color: var(--minecraftgreen);
+  border-radius: 5px;
+}
+
 html {
   height: 100%;
 }
@@ -124,7 +144,6 @@ main section {
   margin: -250px auto 20px;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0px 0px 3px 3px var(--lightgray);
 }
 .forside main .bestilling-form nav ul {
   overflow: auto;
@@ -159,6 +178,7 @@ main section {
 .forside main .reklameskilt {
   flex-direction: column;
   justify-content: center;
+  align-items: flex-end;
   background-image: url(../img/holiday-2733322_1280.jpg);
   background-size: cover;
   height: 300px;
@@ -166,6 +186,7 @@ main section {
   padding: 20px;
 }
 .forside main .reklameskilt article {
+  width: 100%;
   background-color: var(--lightblue);
   border-radius: 0px 10px;
   padding: 20px;
@@ -194,7 +215,6 @@ main section {
 .forside main .tilbudseksjon article {
   width: auto;
   height: 150px;
-  box-shadow: 0px 0px 10px 5px var(--lightgray);
   padding: 15px;
   border-radius: 10px;
 }
@@ -208,7 +228,6 @@ main section {
 .forside main .tips-inspirasjon article {
   justify-self: center;
   align-self: stretch;
-  box-shadow: 0px 0px 10px 5px var(--lightgray);
   border: none;
   border-radius: 10px;
   overflow: hidden;
@@ -239,35 +258,40 @@ main section {
 }
 
 .hotellside main .image-gallery {
-  display: flex;
-  overflow-x: auto;
   position: relative;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
-.hotellside main .image-gallery figure {
+.hotellside main .image-gallery .images {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.hotellside main .image-gallery .images figure {
   height: auto;
   margin: 0;
   flex: 0 0 100%;
 }
-.hotellside main .image-gallery figure img {
+.hotellside main .image-gallery .images figure img {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
-.hotellside main .image-gallery .absolute {
+.hotellside main .image-gallery .navigasjonsknapp {
   position: absolute;
   margin: 5px;
+  z-index: 1;
 }
-.hotellside main .image-gallery button {
-  right: 10px;
+.hotellside main .image-gallery .hjerte {
   top: 10px;
+  right: 10px;
   border: none;
   background-color: var(--white);
   border-radius: 25px;
   font-size: 20px;
   padding: 5px 7px;
+}
+.hotellside main .image-gallery .hjerte:hover {
+  background-color: var(--lightgray);
 }
 .hotellside main .image-gallery span {
   right: 10px;
@@ -280,6 +304,102 @@ main section {
 }
 .hotellside main .image-gallery span i {
   padding-right: 5px;
+}
+.hotellside main .image-gallery .venstre,
+.hotellside main .image-gallery .hoyre {
+  background-color: var(--black);
+  color: var(--white);
+  opacity: 0.7;
+  padding: 5px 9px;
+  border: 0;
+  border-radius: 25px;
+}
+.hotellside main .image-gallery .venstre {
+  top: 50%;
+  left: 0;
+}
+.hotellside main .image-gallery .hoyre {
+  top: 50%;
+  right: 0;
+}
+.hotellside main .navigasjon nav {
+  margin-top: 10px;
+  border-bottom: 3px solid var(--lightgray);
+}
+.hotellside main .navigasjon nav ul {
+  margin: 0;
+}
+.hotellside main .navigasjon nav ul li {
+  padding: 1rem;
+}
+.hotellside main .navigasjon nav ul .checked {
+  border-bottom: 2px solid var(--lightblue);
+}
+.hotellside main .beskrivelse {
+  padding: 10px;
+}
+.hotellside main .beskrivelse .oversikt .rate {
+  display: flex;
+  gap: 5px;
+}
+.hotellside main .beskrivelse .tilbyer {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.hotellside main .beskrivelse .kart iframe {
+  width: 100%;
+  height: 300px;
+}
+.hotellside main .velg-rom {
+  width: 90%;
+  margin: 20px auto 0;
+}
+.hotellside main .velg-rom .card {
+  margin: 1rem auto;
+  width: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.hotellside main .velg-rom .card figure {
+  margin: 0;
+}
+.hotellside main .velg-rom .card figure img {
+  width: 100%;
+}
+.hotellside main .velg-rom .card h3,
+.hotellside main .velg-rom .card strong,
+.hotellside main .velg-rom .card p {
+  margin: 10px 10px 20px;
+}
+.hotellside main .velg-rom .card h3,
+.hotellside main .velg-rom .card strong {
+  font-size: 20px;
+}
+.hotellside main .velg-rom .total-summer {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  align-items: center;
+  background-color: var(--white);
+}
+.hotellside main .velg-rom .total-summer aside h3,
+.hotellside main .velg-rom .total-summer aside p {
+  margin: 5px 0;
+}
+.hotellside main .velg-rom .total-summer aside h3 {
+  font-size: 30px;
+  font-weight: 800;
+}
+.hotellside main .velg-rom .total-summer button {
+  border-radius: 30px;
+  border: none;
+  background-color: var(--oceanblue);
+  color: var(--white);
+  font-size: 20px;
+  padding: 10px 15px;
 }
 
 footer {
@@ -392,7 +512,6 @@ footer .sosialemedier ul li a i {
     width: 300px;
   }
   .forside main .reklameskilt {
-    align-items: flex-end;
     background-position: 50%;
   }
   .forside main .reklameskilt article {
@@ -406,22 +525,61 @@ footer .sosialemedier ul li a i {
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
   }
-  .hotellside main .image-gallery {
+  .hotellside main .image-gallery .images {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 1rem;
   }
-  .hotellside main .image-gallery .big-image1 {
+  .hotellside main .image-gallery .images .big-image1 {
     grid-column: 1/3;
     grid-row: 1/3;
   }
-  .hotellside main .image-gallery .big-image2 {
+  .hotellside main .image-gallery .images .big-image2 {
     grid-column: 3/5;
     grid-row: 2/4;
   }
-  .hotellside main .image-gallery figure {
+  .hotellside main .image-gallery .images figure {
     height: auto;
+  }
+  .hotellside main .image-gallery .venstre,
+  .hotellside main .image-gallery .hoyre {
+    display: none;
+  }
+  .hotellside main .colum-hotell {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    grid-template-areas: "oversikt kart" "fasiliteter kart" "tilbyer kart";
+  }
+  .hotellside main .colum-hotell .oversikt {
+    grid-area: oversikt;
+  }
+  .hotellside main .colum-hotell .fasiliteter {
+    grid-area: fasiliteter;
+  }
+  .hotellside main .colum-hotell .tilbyer {
+    grid-area: tilbyer;
+  }
+  .hotellside main .colum-hotell .kart {
+    justify-self: center;
+    grid-area: kart;
+  }
+  .hotellside main .colum-hotell .kart iframe {
+    border-radius: 10px;
+  }
+  .hotellside main .velg-rom {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr 1fr auto;
+    gap: 2rem;
+  }
+  .hotellside main .velg-rom .title {
+    grid-row: 1/2;
+    grid-column: 1/4;
+  }
+  .hotellside main .velg-rom .total-summer {
+    grid-row: 4/5;
+    grid-column: 1/4;
   }
   footer {
     grid-template-rows: repeat(2, auto);

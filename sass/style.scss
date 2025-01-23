@@ -70,6 +70,28 @@ a:hover {
   color: var(--white);
 }
 
+.box-shadow {
+  //søkte "box shadow custom" og fant boxshadow code generator og brukte den
+  box-shadow: 0px 0px 10px 5px var(--lightgray);
+}
+
+.paragraph {
+  span {
+    margin-right: 5px;
+  }
+}
+.blo-link {
+  color: var(--oceanblue);
+  font-size: small;
+}
+
+.rate-box {
+  padding: 3px 5px;
+  color: white;
+  background-color: var(--minecraftgreen);
+  border-radius: 5px;
+}
+
 //hoved felles html styles her
 
 //har letet etter hvordan kan jeg sette footer på bunnen fast og fant youtube video forteller hvordan man gjør det lenken ligger i referance"sticky footer"
@@ -138,9 +160,6 @@ main {
       margin: -250px auto 20px;
       padding: 10px;
       border-radius: 10px;
-      //søkte "box shadow custom" og fant boxshadow code generator og brukte den
-      box-shadow: 0px 0px 3px 3px var(--lightgray);
-
       nav {
         ul {
           //jeg brukte min gamle nettside som var i host på itsud for å se hvordan jeg lagde side scroll funksjon
@@ -181,12 +200,15 @@ main {
     .reklameskilt {
       flex-direction: column;
       justify-content: center;
+      align-items: flex-end;
+
       background-image: url(../img/holiday-2733322_1280.jpg);
       background-size: cover;
       height: 300px;
       border-radius: 10px;
       padding: 20px;
       article {
+        width: 100%;
         background-color: var(--lightblue);
         //søkte "border radius only top" og fant løsning i stackoverflow
         -moz-border-radius: 0px;
@@ -218,7 +240,6 @@ main {
       article {
         width: auto;
         height: 150px;
-        box-shadow: 0px 0px 10px 5px var(--lightgray);
         padding: 15px;
         border-radius: 10px;
       }
@@ -233,7 +254,6 @@ main {
       article {
         justify-self: center;
         align-self: stretch;
-        box-shadow: 0px 0px 10px 5px var(--lightgray);
         border: none;
         border-radius: 10px;
         //Jeg kunne ikke ha rundt på kant på border på toppen. så viste jeg koden til tips-insipirasjon seksjons kode og css til chatgpt og han ambefalte meg å legge overflow hidden
@@ -271,40 +291,46 @@ main {
   main {
     //jeg insipierte fra oblig 3 nettside jeg lagde du kan se via å scrolle på side sko bildene
     .image-gallery {
-      display: flex;
-      overflow-x: auto;
       position: relative;
-      margin: 0;
+      margin: 0 auto;
       padding: 0;
-      figure {
-        //jeg har letet etter hvordan kan jeg justere høyden automatisk sammen med bredden og fant en youtube video handler om css høyde lenken ligger i rapport
-        height: auto;
-        margin: 0;
-        //når jeg brukte display flex alle figure taggen ble squiza inne i image-gallery istedenfor å over flyte fra bretten til skjermen selv om jeg hadde oerflov-x auto.
-        //jeg har gitt hele css og html koden til chatgpt og spurte hvordan kan jeg sette bildet uten å bli squiza og la den overflyte
-        //chat gpt ambefalte meg å bruke flex 0 0 100% inne i figure og den funka.
-        flex: 0 0 100%;
-        img {
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
+      .images {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        figure {
+          //jeg har letet etter hvordan kan jeg justere høyden automatisk sammen med bredden og fant en youtube video handler om css høyde lenken ligger i rapport
+          height: auto;
+          margin: 0;
+          //når jeg brukte display flex alle figure taggen ble squiza inne i image-gallery istedenfor å over flyte fra bretten til skjermen selv om jeg hadde oerflov-x auto.
+          //jeg har gitt hele css og html koden til chatgpt og spurte hvordan kan jeg sette bildet uten å bli squiza og la den overflyte
+          //chat gpt ambefalte meg å bruke flex 0 0 100% inne i figure og den funka.
+          flex: 0 0 100%;
+          img {
+            height: 100%;
+            width: 100%;
+          }
         }
       }
-      .absolute{
+
+      .navigasjonsknapp {
         position: absolute;
         margin: 5px;
+        z-index: 1;
       }
-      // jeg klarte ikke sette disse to på riktig posisjon med top og left og googla jeg absolute position right og fant at man kan bruke metode "right" via w3school. kilde ligger i rapport
-      button{
-        right: 10px;
+      .hjerte {
         top: 10px;
+        right: 10px;
         border: none;
         background-color: var(--white);
         border-radius: 25px;
         font-size: 20px;
         padding: 5px 7px;
       }
-      span{
+      .hjerte:hover {
+        background-color: var(--lightgray);
+      }
+      span {
         right: 10px;
         bottom: 10px;
         background-color: var(--black);
@@ -312,8 +338,113 @@ main {
         opacity: 0.4;
         padding: 5px;
         border-radius: 25px;
-        i{
+        i {
           padding-right: 5px;
+        }
+      }
+      .venstre,
+      .hoyre {
+        background-color: var(--black);
+        color: var(--white);
+        opacity: 0.7;
+        padding: 5px 9px;
+        border: 0;
+        border-radius: 25px;
+      }
+      .venstre {
+        top: 50%;
+        left: 0;
+      }
+      .hoyre {
+        top: 50%;
+        right: 0;
+      }
+    }
+
+    .navigasjon {
+      nav {
+        margin-top: 10px;
+        border-bottom: 3px solid var(--lightgray);
+        ul {
+          margin: 0;
+          li {
+            padding: 1rem;
+          }
+          .checked {
+            border-bottom: 2px solid var(--lightblue);
+          }
+        }
+      }
+    }
+    .beskrivelse {
+      padding: 10px;
+      .oversikt {
+        .rate {
+          display: flex;
+          gap: 5px;
+        }
+      }
+      .tilbyer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+      }
+      .kart {
+        iframe {
+          width: 100%;
+          height: 300px;
+        }
+      }
+    }
+    .velg-rom {
+      width: 90%;
+      margin: 20px auto 0;
+      .card {
+        margin: 1rem auto;
+        width: auto;
+        border-radius: 10px;
+        overflow: hidden;
+        figure {
+          margin: 0;
+          img {
+            width: 100%;
+          }
+        }
+        h3,
+        strong,
+        p {
+          margin: 10px 10px 20px;
+        }
+        h3,
+        strong {
+          font-size: 20px;
+        }
+      }
+      .total-summer {
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+        justify-content: space-between;
+        padding: 10px;
+        border-radius: 10px 10px 0 0;
+        align-items: center;
+        background-color: var(--white);
+        aside {
+          h3,
+          p {
+            margin: 5px 0;
+          }
+          h3 {
+            font-size: 30px;
+            font-weight: 800;
+          }
+        }
+        button {
+          border-radius: 30px;
+          border: none;
+          background-color: var(--oceanblue);
+          color: var(--white);
+          font-size: 20px;
+          padding: 10px 15px;
         }
       }
     }
@@ -430,7 +561,7 @@ footer {
     }
   }
 
-  main{
+  main {
     max-width: 1400px;
   }
 
@@ -464,7 +595,6 @@ footer {
         }
       }
       .reklameskilt {
-        align-items: flex-end;
         background-position: 50%;
         article {
           width: 600px;
@@ -482,27 +612,75 @@ footer {
     }
   }
 
-  .hotellside{
-    main{
-      .image-gallery{
-        //her insipirerte fra gird video fra youtube
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        gap: 1rem;
+  .hotellside {
+    main {
+      .image-gallery {
+        .images {
+          //her insipirerte fra gird video fra youtube
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(3, 1fr);
+          gap: 1rem;
 
-        .big-image1{
-          grid-column: 1/3;
-          grid-row: 1/3;
+          .big-image1 {
+            grid-column: 1/3;
+            grid-row: 1/3;
+          }
+
+          .big-image2 {
+            grid-column: 3/5;
+            grid-row: 2/4;
+          }
+
+          figure {
+            height: auto;
+          }
+        }
+        .venstre,
+        .hoyre {
+          display: none;
+        }
+      }
+      .colum-hotell {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr auto 1fr;
+        grid-template-areas:
+          "oversikt kart"
+          "fasiliteter kart"
+          "tilbyer kart";
+        .oversikt {
+          grid-area: oversikt;
         }
 
-        .big-image2{
-          grid-column: 3/5;
-          grid-row: 2/4;
+        .fasiliteter {
+          grid-area: fasiliteter;
         }
 
-        figure{
-          height: auto;
+        .tilbyer {
+          grid-area: tilbyer;
+        }
+
+        .kart {
+          justify-self: center;
+          grid-area: kart;
+          iframe {
+            border-radius: 10px;
+          }
+        }
+      }
+      .velg-rom {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto 1fr 1fr auto;
+        gap: 2rem;
+
+        .title {
+          grid-row: 1/2;
+          grid-column: 1/4;
+        }
+        .total-summer {
+          grid-row: 4/5;
+          grid-column: 1/4;
         }
       }
     }

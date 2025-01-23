@@ -34,32 +34,152 @@
     </header>
     <div class="hotellside">
         <main class="flex">
-
-
             <section class="image-gallery">
-                <figure class="big-image1">
-                    <img src="./img/landscape-2016308_640.jpg" alt="bildet til pool">
-                </figure>
-                <figure>
-                    <img src="./img/sea-4768869_1920.jpg" alt="bildet til sea">
-                </figure>
-                <figure>
-                    <img src="./img/beach-1836467_640.jpg" alt="bildet til beach">
-                </figure>
-                <figure>
-                    <img src="./img/beach-666122_640.jpg" alt="bitdet til beach 2">
-                </figure>
-                <figure>
-                    <img src="./img/beach-6514331_640.jpg" alt="bitdet til beach 3">
-                </figure>
-                <figure class="big-image2">
-                    <img src="./img/holiday-2733322_1280.jpg" alt="bildet til dame i pool">
-                </figure>
-                <button class="absolute"><i class="fa-solid fa-heart" style="color: #ff0000;"></i></button>
-                <span class="absolute"><i class="fa-regular fa-images"></i>49</span>
+                <div class="images">
+                    <figure class="big-image1">
+                        <img src="./img/landscape-2016308_640.jpg" alt="bildet til pool">
+                    </figure>
+                    <figure>
+                        <img src="./img/sea-4768869_1920.jpg" alt="bildet til sea">
+                    </figure>
+                    <figure>
+                        <img src="./img/beach-1836467_640.jpg" alt="bildet til beach">
+                    </figure>
+                    <figure>
+                        <img src="./img/beach-666122_640.jpg" alt="bitdet til beach 2">
+                    </figure>
+                    <figure>
+                        <img src="./img/beach-6514331_640.jpg" alt="bitdet til beach 3">
+                    </figure>
+                    <figure class="big-image2">
+                        <img src="./img/holiday-2733322_1280.jpg" alt="bildet til dame i pool">
+                    </figure>
+                </div>
+                    <button class="navigasjonsknapp hjerte"><i class="fa-regular fa-heart" style="color: #ff0000;"></i></button>
+                    <span class="navigasjonsknapp"><i class="fa-regular fa-images"></i>49</span>
+                    <button class="navigasjonsknapp venstre"><i class="fa-solid fa-angle-left"></i></button>
+                    <button class="navigasjonsknapp hoyre"><i class="fa-solid fa-angle-right"></i></button>
+                </section>
+            <section class="navigasjon">
+                <nav>
+                    <ul class="flex gap1rem">
+                        <li class="checked"><a href="#">Oversikt</a></li>
+                        <li><a href="#">Fasiliteter</a></li>
+                        <li><a href="#">Rom</a></li>
+                    </ul>
+                </nav>
             </section>
-            <section class="beskrivelse"></section>
-            <section class="rom" id="rom"></section>
+            <section class="beskrivelse colum-hotell grid">
+                <article class="oversikt">
+                    <h2>Parga Beach</h2>
+                    <span class="rate">
+                        <i class="fa-solid fa-sun" style="color: #FFD43B;"></i>
+                        <i class="fa-solid fa-sun" style="color: #FFD43B;"></i>
+                        <i class="fa-solid fa-sun" style="color: #FFD43B;"></i>
+                        <i class="fa-solid fa-sun" style="color: #FFD43B;"></i>
+                        <i class="fa-regular fa-sun" style="color: #FFD43B;"></i>
+                    </span>
+                    <p class="paragraph"><span class="rate-box">8.9</span>Fantanstisk</p>
+                    <a href="#" class="blo-link">Se alle anmeldelsene<i class="fa-solid fa-chevron-right"></i></a>
+                </article>
+                <article class="fasiliteter">
+                    <h3>Fasiliteter</h3>
+                    <p>Paraga Beach tilbyr et tilsynelatende uuttømmelig utvalg av sport og aktiviteter og lokker
+                        til
+                        seg så vel eliteutøvere som aktive familier og hverdagsmosjonister - alle aldre og på alle
+                        nivåer.</p>
+                </article>
+                <article class="tilbyer grid">
+                    <p class="paragraph"><span><i class="fa-solid fa-paw"></i></span>Kjæredyr-vennlig</p>
+                    <p class="paragraph"><span><i class="fa-solid fa-mug-hot"></i></span>Frokost</p>
+                    <p class="paragraph"><span><i class="fa-solid fa-spa"></i></span>Spa</p>
+                    <p class="paragraph"><span><i class="fa-solid fa-bell-concierge"></i></span>Romservice</p>
+                    <p class="paragraph"><span><i class="fa-solid fa-martini-glass"></i></span>Bar</p>
+                    <p class="paragraph"><span><i class="fa-solid fa-dumbbell"></i></span>Treningssenter</p>
+                    <a href="#" class="blo-link">Se alle eiendomsfasiliteter<i
+                            class="fa-solid fa-chevron-right"></i></a>
+                </article>
+                <aside class="kart">
+                    <h2>Utforsk området</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2156.436333709463!2d20.390058887924106!3d39.28511087455346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sno!4v1737589519321!5m2!1sen!2sno"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </aside>
+            </section>
+            <section class="velg-rom grid" id="velg-rom">
+                <h2 class="title">Velg rom</h2>
+                <article class="box-shadow card">
+                    <figure>
+                        <img src="./img/beach-6514331_640.jpg" alt="">
+                    </figure>
+                    <h3>Junior Suite</h3>
+                    <p>Plass til to <span>&#9679;</span>
+                        Queen size-seng</p>
+                    <p class="paragraph"><span class="rate-box">8.9</span>59 Anmeldelser</p>
+                    <strong>
+                        6789kr
+                    </strong>
+                    <p>fra 3 natter, 1 rom</p>
+                    <p>2263kr per natt</p>
+                    <p>Ink moms og avgifter</p>
+                </article>
+                <article class="box-shadow card">
+                    <figure>
+                        <img src="./img/beach-6514331_640.jpg" alt="">
+                    </figure>
+                    <h3>Junior Suite</h3>
+                    <!-- black circle hentet jeg fra w3 school -->
+                    <p>Plass til to <span>&#9679;</span>
+                        Queen size-seng</p>
+                    <p class="paragraph"><span class="rate-box">8.9</span>59 Anmeldelser</p>
+                    <strong>
+                        6789kr
+                    </strong>
+                    <p>fra 3 natter, 1 rom</p>
+                    <p>2263kr per natt</p>
+                    <p>Ink moms og avgifter</p>
+                </article>
+                <article class="box-shadow card">
+                    <figure>
+                        <img src="./img/beach-6514331_640.jpg" alt="">
+                    </figure>
+                    <h3>Junior Suite</h3>
+                    <p>Plass til to <span>&#9679;</span>
+                        Queen size-seng</p>
+                    <p class="paragraph"><span class="rate-box">8.9</span>59 Anmeldelser</p>
+                    <strong>
+                        6789kr
+                    </strong>
+                    <p>fra 3 natter, 1 rom</p>
+                    <p>2263kr per natt</p>
+                    <p>Ink moms og avgifter</p>
+                </article>
+                <article class="box-shadow card">
+                    <figure>
+                        <img src="./img/beach-6514331_640.jpg" alt="">
+                    </figure>
+                    <h3>Junior Suite</h3>
+                    <p>Plass til to <span>&#9679;</span>
+                        Queen size-seng</p>
+                    <p class="paragraph"><span class="rate-box">8.9</span>59 Anmeldelser</p>
+                    <strong>
+                        6789kr
+                    </strong>
+                    <p>fra 3 natter, 1 rom</p>
+                    <p>2263kr per natt</p>
+                    <p>Ink moms og avgifter</p>
+                </article>
+                <article class="total-summer flex">
+                    <aside>
+                        <h3>8733kr</h3>
+                        <p>2394kr per natt</p>
+                    </aside>
+                    <button>
+                        Velg rom
+                    </button>
+                </article>
+            </section>
 
 
         </main>
