@@ -402,6 +402,68 @@ main section {
   padding: 10px 15px;
 }
 
+.betalingsside main nav ul {
+  background-color: var(--oceanblue);
+  color: var(--white);
+  align-items: center;
+  overflow-x: auto;
+  padding: 5px 15px;
+  white-space: nowrap;
+  border-radius: 0 0 10px 10px;
+}
+.betalingsside main nav ul li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.betalingsside main nav ul li a {
+  color: var(--white);
+  font-size: 20px;
+}
+.betalingsside main nav ul li a strong {
+  font-size: 25px;
+}
+.betalingsside main nav ul li i {
+  font-size: 35px;
+}
+.betalingsside main .valgte-hotell label input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+}
+.betalingsside main .opplysninger {
+  width: 90%;
+  margin: auto;
+}
+.betalingsside main .opplysninger fieldset {
+  border: none;
+  border-radius: 10px;
+  background-color: var(--white);
+  margin: 10px auto;
+}
+.betalingsside main .opplysninger fieldset legend {
+  font-size: 20px;
+}
+.betalingsside main .opplysninger fieldset label {
+  display: block;
+  margin: 10px 0;
+}
+.betalingsside main .opplysninger fieldset input, .betalingsside main .opplysninger fieldset select {
+  width: 100%;
+  border: 1px solid var(--lightgray);
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 7px;
+}
+.betalingsside main .opplysninger fieldset .fdato {
+  display: flex;
+  gap: 1rem;
+}
+.betalingsside main .opplysninger fieldset .kjonn-seksjon {
+  display: flex;
+}
+
 footer {
   margin-top: auto;
   background-color: var(--black);
@@ -580,6 +642,16 @@ footer .sosialemedier ul li a i {
   .hotellside main .velg-rom .total-summer {
     grid-row: 4/5;
     grid-column: 1/4;
+  }
+  .betalingsside main nav ul li {
+    font-size: 30px;
+  }
+  .betalingsside main nav ul li a {
+    font-size: 25px;
+  }
+  .betalingsside main nav ul li a strong {
+    font-size: 30px;
+    font-weight: 700;
   }
   footer {
     grid-template-rows: repeat(2, auto);

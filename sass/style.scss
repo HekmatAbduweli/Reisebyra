@@ -287,6 +287,7 @@ main {
   }
 }
 
+//hotellside
 .hotellside {
   main {
     //jeg insipierte fra oblig 3 nettside jeg lagde du kan se via å scrolle på side sko bildene
@@ -446,6 +447,81 @@ main {
           font-size: 20px;
           padding: 10px 15px;
         }
+      }
+    }
+  }
+}
+
+//for bestillingsside
+.betalingsside {
+  main {
+    nav {
+      ul {
+        background-color: var(--oceanblue);
+        color: var(--white);
+        align-items: center;
+        overflow-x: auto;
+        padding: 5px 15px;
+        white-space: nowrap;
+        border-radius: 0 0 10px 10px ;
+        li {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          a {
+            color: var(--white);
+            font-size: 20px;
+            strong{
+              font-size: 25px;
+            }
+          }
+          i {
+            font-size: 35px;
+          }
+        }
+      }
+    }
+    .valgte-hotell{
+        label{
+          input{
+            appearance: none;
+            outline: none;
+          }
+          input:checked{
+
+          }
+        }
+      }
+    .opplysninger {
+      width: 90%;
+      margin: auto;
+      fieldset {
+        border: none;
+        border-radius: 10px;
+        background-color: var(--white);
+        margin: 10px auto;
+        legend{
+          font-size: 20px;
+        }
+        label{
+          display: block;
+          margin: 10px 0;
+        }
+        input,select{
+          width: 100%;
+          border: 1px solid var(--lightgray);
+          border-radius: 5px;
+          font-size: 15px;
+          padding: 7px;
+        }
+        .fdato{
+          display: flex;
+          gap: 1rem;
+        }
+        .kjonn-seksjon{
+          display: flex;
+        }
+
       }
     }
   }
@@ -684,6 +760,21 @@ footer {
         }
       }
     }
+  }
+
+  .betalingsside{
+    main{nav{
+      ul{
+        li{
+          font-size: 30px;
+          a{
+            font-size: 25px;
+            strong{font-size: 30px;
+            font-weight: 700;}
+          }
+        }
+      }
+    }}
   }
 
   footer {
