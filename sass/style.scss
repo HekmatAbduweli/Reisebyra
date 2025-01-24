@@ -92,6 +92,11 @@ a:hover {
   border-radius: 5px;
 }
 
+.rate {
+  display: flex;
+  gap: 5px;
+}
+
 //hoved felles html styles her
 
 //har letet etter hvordan kan jeg sette footer på bunnen fast og fant youtube video forteller hvordan man gjør det lenken ligger i referance"sticky footer"
@@ -379,12 +384,6 @@ main {
     }
     .beskrivelse {
       padding: 10px;
-      .oversikt {
-        .rate {
-          display: flex;
-          gap: 5px;
-        }
-      }
       .tilbyer {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
@@ -463,7 +462,8 @@ main {
         overflow-x: auto;
         padding: 5px 15px;
         white-space: nowrap;
-        border-radius: 0 0 10px 10px ;
+        border-radius: 0 0 10px 10px;
+        margin: 0;
         li {
           display: flex;
           align-items: center;
@@ -471,7 +471,7 @@ main {
           a {
             color: var(--white);
             font-size: 20px;
-            strong{
+            strong {
               font-size: 25px;
             }
           }
@@ -481,47 +481,84 @@ main {
         }
       }
     }
-    .valgte-hotell{
-        label{
-          input{
-            appearance: none;
-            outline: none;
-          }
-          input:checked{
 
+    .valgte-hotell {
+      border-radius: 10px;
+      //henta fra index.html da det var på nettsiden når jeg insipierte. fordi jeg slita meg å finne fra sass koden
+      box-shadow: 0px 0px 10px 5px var(--lightgray);
+      width: 90%;
+      margin: 20px auto;
+      padding: 15px 5px;
+      //her insipierte Web dev simplified sin youtube video for å lage toggle knapp med kun css
+      label {
+        input {
+          margin: 100px 0;
+          appearance: none;
+          outline: none;
+        }
+      }
+      article {
+        display: none;
+        margin-top: 20px;
+        figure {
+          width: 90%;
+          border-radius: 10px;
+          margin: auto;
+          overflow: hidden;
+          img {
+            width: 100%;
+          }
+        }
+        p {
+          i {
+            margin-right: 1rem;
           }
         }
       }
+      label:has(input:checked) + article {
+        display: block;
+      }
+    }
     .opplysninger {
       width: 90%;
-      margin: auto;
+      margin: 1rem auto;
       fieldset {
         border: none;
         border-radius: 10px;
         background-color: var(--white);
         margin: 10px auto;
-        legend{
+        legend {
           font-size: 20px;
         }
-        label{
+        label {
           display: block;
           margin: 10px 0;
         }
-        input,select{
+        input,
+        select {
           width: 100%;
           border: 1px solid var(--lightgray);
           border-radius: 5px;
           font-size: 15px;
           padding: 7px;
         }
-        .fdato{
+        .fdato {
           display: flex;
           gap: 1rem;
         }
-        .kjonn-seksjon{
+        .kjonn-seksjon {
           display: flex;
+          label{
+            display: flex;
+          }
         }
-
+      }
+      button {
+        border: none;
+        border-radius: 5px;
+        background-color: var(--floweryellow);
+        font-size: 15px;
+        padding: 15px;
       }
     }
   }
@@ -621,6 +658,8 @@ footer {
   }
   header {
     width: 100%;
+    //oprettet box shadow via box shadow css generator fra nettsiden
+    box-shadow: 0px 10px 12px 0px var(--lightgray);
     a {
       img {
         width: 120px;
@@ -762,19 +801,52 @@ footer {
     }
   }
 
-  .betalingsside{
-    main{nav{
-      ul{
-        li{
-          font-size: 30px;
-          a{
-            font-size: 25px;
-            strong{font-size: 30px;
-            font-weight: 700;}
+  .betalingsside {
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      align-items: start;
+
+      nav {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        ul {
+          li {
+            font-size: 30px;
+            a {
+              font-size: 25px;
+              strong {
+                font-size: 30px;
+                font-weight: 700;
+              }
+            }
           }
         }
       }
-    }}
+      .valgte-hotell {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        label {
+          display: none;
+        }
+        article {
+          display: block;
+        }
+      }
+      .opplysninger {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        fieldset{
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+          gap: 1rem;
+          .fd,.kj{
+            grid-column: 1/3;
+          }
+        }
+      }
+    }
   }
 
   footer {

@@ -86,6 +86,11 @@ a:hover {
   border-radius: 5px;
 }
 
+.rate {
+  display: flex;
+  gap: 5px;
+}
+
 html {
   height: 100%;
 }
@@ -338,10 +343,6 @@ main section {
 .hotellside main .beskrivelse {
   padding: 10px;
 }
-.hotellside main .beskrivelse .oversikt .rate {
-  display: flex;
-  gap: 5px;
-}
 .hotellside main .beskrivelse .tilbyer {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -410,6 +411,7 @@ main section {
   padding: 5px 15px;
   white-space: nowrap;
   border-radius: 0 0 10px 10px;
+  margin: 0;
 }
 .betalingsside main nav ul li {
   display: flex;
@@ -426,15 +428,42 @@ main section {
 .betalingsside main nav ul li i {
   font-size: 35px;
 }
+.betalingsside main .valgte-hotell {
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px var(--lightgray);
+  width: 90%;
+  margin: 20px auto;
+  padding: 15px 5px;
+}
 .betalingsside main .valgte-hotell label input {
+  margin: 100px 0;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   outline: none;
 }
+.betalingsside main .valgte-hotell article {
+  display: none;
+  margin-top: 20px;
+}
+.betalingsside main .valgte-hotell article figure {
+  width: 90%;
+  border-radius: 10px;
+  margin: auto;
+  overflow: hidden;
+}
+.betalingsside main .valgte-hotell article figure img {
+  width: 100%;
+}
+.betalingsside main .valgte-hotell article p i {
+  margin-right: 1rem;
+}
+.betalingsside main .valgte-hotell label:has(input:checked) + article {
+  display: block;
+}
 .betalingsside main .opplysninger {
   width: 90%;
-  margin: auto;
+  margin: 1rem auto;
 }
 .betalingsside main .opplysninger fieldset {
   border: none;
@@ -449,7 +478,8 @@ main section {
   display: block;
   margin: 10px 0;
 }
-.betalingsside main .opplysninger fieldset input, .betalingsside main .opplysninger fieldset select {
+.betalingsside main .opplysninger fieldset input,
+.betalingsside main .opplysninger fieldset select {
   width: 100%;
   border: 1px solid var(--lightgray);
   border-radius: 5px;
@@ -462,6 +492,16 @@ main section {
 }
 .betalingsside main .opplysninger fieldset .kjonn-seksjon {
   display: flex;
+}
+.betalingsside main .opplysninger fieldset .kjonn-seksjon label {
+  display: flex;
+}
+.betalingsside main .opplysninger button {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--floweryellow);
+  font-size: 15px;
+  padding: 15px;
 }
 
 footer {
@@ -538,6 +578,7 @@ footer .sosialemedier ul li a i {
   }
   header {
     width: 100%;
+    box-shadow: 0px 10px 12px 0px var(--lightgray);
   }
   header a img {
     width: 120px;
@@ -643,6 +684,16 @@ footer .sosialemedier ul li a i {
     grid-row: 4/5;
     grid-column: 1/4;
   }
+  .betalingsside main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: start;
+  }
+  .betalingsside main nav {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
   .betalingsside main nav ul li {
     font-size: 30px;
   }
@@ -652,6 +703,28 @@ footer .sosialemedier ul li a i {
   .betalingsside main nav ul li a strong {
     font-size: 30px;
     font-weight: 700;
+  }
+  .betalingsside main .valgte-hotell {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .betalingsside main .valgte-hotell label {
+    display: none;
+  }
+  .betalingsside main .valgte-hotell article {
+    display: block;
+  }
+  .betalingsside main .opplysninger {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .betalingsside main .opplysninger fieldset {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .betalingsside main .opplysninger fieldset .fd, .betalingsside main .opplysninger fieldset .kj {
+    grid-column: 1/3;
   }
   footer {
     grid-template-rows: repeat(2, auto);
