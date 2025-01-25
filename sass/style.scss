@@ -1,5 +1,5 @@
 //har skjekket på youtube hvordan kan jeg importere google font: youtube video ligger i referancen
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 //Jeg spurte chagpt at hvordan kan jeg lage farge variabel
 :root {
@@ -198,6 +198,7 @@ main {
           background-color: var(--floweryellow);
           border: none;
           font-size: 20px;
+          font-weight: bold;
           padding: 10px;
         }
       }
@@ -224,12 +225,13 @@ main {
         display: inline-block;
         strong {
           font-size: 30px;
-          font-weight: bolder;
+          font-weight: 800;
         }
       }
       button {
         padding: 10px 5px;
         font-size: 20px;
+        font-weight: bold;
         border: none;
         border-radius: 5px;
         background-color: var(--floweryellow);
@@ -254,7 +256,7 @@ main {
       margin: 20px auto;
       //glemte å rapportere før jeg pusherut, men her brukte jeg grid youtube video til å vite hvordan kan jeg sette artikkelen til ny kolonne av seg selv når bretten til websiden blir mindre.(jeg hadde sett helevideo før jeg har startet denne oppgaven så jeg viste at det finnes tutorial på denne videoen )
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-rows: auto 1fr 1fr;
       gap: 1rem 1rem;
       article {
         justify-self: center;
@@ -492,7 +494,6 @@ main {
       //her insipierte Web dev simplified sin youtube video for å lage toggle knapp med kun css
       label {
         input {
-          margin: 100px 0;
           appearance: none;
           outline: none;
         }
@@ -533,6 +534,7 @@ main {
         label {
           display: block;
           margin: 10px 0;
+          font-size: 20px;
         }
         input,
         select {
@@ -542,13 +544,12 @@ main {
           font-size: 15px;
           padding: 7px;
         }
-        .fdato {
+        .field {
+          width: 100%;
+          padding: 0;
           display: flex;
           gap: 1rem;
-        }
-        .kjonn-seksjon {
-          display: flex;
-          label{
+          label {
             display: flex;
           }
         }
@@ -723,6 +724,10 @@ footer {
         width: 100%;
         //Jeg fortalte til chatgpt at jeg trengte "grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));" for å sette artikkelen til neste kolum når bretten blir mindre og fortalte og spurte at jeg trenger også sette begrensninger til tre på row og hvordan kan jeg nå målet mitt og chatgpt ambetfalte å lage en ny grid-area-colum på media query
         grid-template-columns: repeat(3, 1fr);
+        h2 {
+          grid-row: 1/2;
+          grid-column: 1/4;
+        }
       }
     }
   }
@@ -837,11 +842,11 @@ footer {
       .opplysninger {
         grid-column: 1/2;
         grid-row: 2/3;
-        fieldset{
+        fieldset {
           display: grid;
-          grid-template-columns: repeat(2,1fr);
+          grid-template-columns: repeat(2, 1fr);
           gap: 1rem;
-          .fd,.kj{
+          .field {
             grid-column: 1/3;
           }
         }

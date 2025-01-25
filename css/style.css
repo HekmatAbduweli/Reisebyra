@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --lightblue: #52d3f0;
   --floweryellow: #ffcf40;
@@ -178,6 +178,7 @@ main section {
   background-color: var(--floweryellow);
   border: none;
   font-size: 20px;
+  font-weight: bold;
   padding: 10px;
 }
 .forside main .reklameskilt {
@@ -200,11 +201,12 @@ main section {
 }
 .forside main .reklameskilt article strong {
   font-size: 30px;
-  font-weight: bolder;
+  font-weight: 800;
 }
 .forside main .reklameskilt button {
   padding: 10px 5px;
   font-size: 20px;
+  font-weight: bold;
   border: none;
   border-radius: 5px;
   background-color: var(--floweryellow);
@@ -227,7 +229,7 @@ main section {
   width: 90%;
   margin: 20px auto;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: auto 1fr 1fr;
   gap: 1rem 1rem;
 }
 .forside main .tips-inspirasjon article {
@@ -436,7 +438,6 @@ main section {
   padding: 15px 5px;
 }
 .betalingsside main .valgte-hotell label input {
-  margin: 100px 0;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -477,6 +478,7 @@ main section {
 .betalingsside main .opplysninger fieldset label {
   display: block;
   margin: 10px 0;
+  font-size: 20px;
 }
 .betalingsside main .opplysninger fieldset input,
 .betalingsside main .opplysninger fieldset select {
@@ -486,14 +488,13 @@ main section {
   font-size: 15px;
   padding: 7px;
 }
-.betalingsside main .opplysninger fieldset .fdato {
+.betalingsside main .opplysninger fieldset .field {
+  width: 100%;
+  padding: 0;
   display: flex;
   gap: 1rem;
 }
-.betalingsside main .opplysninger fieldset .kjonn-seksjon {
-  display: flex;
-}
-.betalingsside main .opplysninger fieldset .kjonn-seksjon label {
+.betalingsside main .opplysninger fieldset .field label {
   display: flex;
 }
 .betalingsside main .opplysninger button {
@@ -628,6 +629,10 @@ footer .sosialemedier ul li a i {
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
   }
+  .forside main .tips-inspirasjon h2 {
+    grid-row: 1/2;
+    grid-column: 1/4;
+  }
   .hotellside main .image-gallery .images {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -723,7 +728,7 @@ footer .sosialemedier ul li a i {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
-  .betalingsside main .opplysninger fieldset .fd, .betalingsside main .opplysninger fieldset .kj {
+  .betalingsside main .opplysninger fieldset .field {
     grid-column: 1/3;
   }
   footer {

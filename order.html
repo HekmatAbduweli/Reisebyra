@@ -37,13 +37,13 @@
         <main class="flex">
             <nav>
                 <ul class="flex gap1rem">
-                    <li><a href="#">Søk</a><i class="fa-solid fa-angle-right"></i></li>
-                    <li><a href="#">Søkeresultater</a><i class="fa-solid fa-angle-right"></i></li>
-                    <li><a href="#">Romtype</a><i class="fa-solid fa-angle-right"></i></li>
-                    <li><a href="#">Fly</a><i class="fa-solid fa-angle-right"></i></li>
+                    <li><a href="index.html#sok">Søk</a><i class="fa-solid fa-angle-right"></i></li>
+                    <li><a href="hotell.html#sokeresultat">Søkeresultater</a><i class="fa-solid fa-angle-right"></i></li>
+                    <li><a href="hotell.html#velg-rom">Romtype</a><i class="fa-solid fa-angle-right"></i></li>
+                    <li><a href="https://www.norwegian.no/">Fly</a><i class="fa-solid fa-angle-right"></i></li>
                     <li><a href="#">Tillegg</a><i class="fa-solid fa-angle-right"></i></li>
                     <li><a href="#"><strong>Opplysninger</strong></a><i class="fa-solid fa-angle-right"></i></li>
-                    <li><a href="#">Bestill</a></li>
+                    <li><a href="#bestill">Bestill</a></li>
                 </ul>
             </nav>
             <section class="valgte-hotell">
@@ -79,54 +79,52 @@
                 <h1>Oppgi dine bestillingsopplysninger</h1>
                 <fieldset>
                     <legend>Voksen 18+ hoved bestiller</legend>
-                    <label for="fornavn-hoved">Fornavn(Ifølge pass)
-                        <input type="text" placeholder="fornavn" id="fornavn-hoved">
+                    <label>Fornavn(Ifølge pass)
+                        <input type="text" placeholder="fornavn">
                     </label>
 
-                    <label for="ettermavm">etternavn(Ifølge pass)
-                        <input type="text" placeholder="etternavn" id="etternavn-hoved">
+                    <label>etternavn(Ifølge pass)
+                        <input type="text" placeholder="etternavn">
                     </label>
 
-                    <label for="fdato" class="fd">Fødselsdato
-                        <div class="fdato">
+                    <fieldset class="field">
+                        <legend>Fødselsdato</legend>
                             <input type="number" placeholder="DD" min="1" max="31">
                             <input type="number" placeholder="MM" min="1" max="12">
                             <input type="number" placeholder="ÅÅÅÅ" min="1890" max="2007">
-                        </div>
-                    </label>
+                    </fieldset>
 
-                    <label for="kjonn-hoved" class="kj">Kjønn
-                        <div class="kjonn-seksjon" id="knonn-hoved">
-                            <label for="kvinne">Kvinne
-                                <input type="checkbox" name="kvinne" id="kvinne">
+                    <fieldset class="field">
+                        <legend>Kjønn</legend>
+                            <label>Kvinne
+                                <input type="radio" name="kvinne">
                             </label>
-                            <label for="mann">Mann
-                                <input type="checkbox" name="mann" id="mann">
+                            <label>Mann
+                                <input type="radio" name="mann">
                             </label>
-                        </div>
+                    </fieldset>
+
+                    <label>E-post adresse
+                        <input type="email" name="email">
                     </label>
 
-                    <label for="epost">E-post adresse
-                        <input type="email" name="email" id="epost">
+                    <label>Telefonnummer
+                        <input type="tel" name="tel">
                     </label>
 
-                    <label for="tlf">Telefonnummer
-                        <input type="tel" name="tel" id="tlf">
+                    <label>Gateadresse
+                        <input type="text">
                     </label>
 
-                    <label for="gateadresse">Gateadresse
-                        <input type="text" id="gateadresse">
+                    <label>Postnummer
+                        <input type="number" name="postnr">
                     </label>
 
-                    <label for="postnr">Postnummer
-                        <input type="number" name="postnr" id="postnr">
+                    <label>Poststed
+                        <input type="text">
                     </label>
 
-                    <label for="poststed">Poststed
-                        <input type="text" id="poststed">
-                    </label>
-
-                    <label for="land">Land
+                    <label>Land
                         <!-- Leta jeg etter noen som har skrevet hele landet og fant en fra stack overflow. lenken ligger i rapport-->
                         <select>
                             <option value="0" label="velg et land " selected="selected">Velg et land
@@ -377,35 +375,33 @@
                 </fieldset>
                 <fieldset>
                     <legend>Voksen 18+</legend>
-                    <label for="fornavn">Fornavn(Ifølge pass)
-                        <input type="text" placeholder="fornavn" id="fornavn">
+                    <label>Fornavn(Ifølge pass)
+                        <input type="text" placeholder="fornavn">
                     </label>
 
-                    <label for="ettermavm">etternavn(Ifølge pass)
+                    <label>etternavn(Ifølge pass)
                         <input type="text" placeholder="etternavn">
                     </label>
 
-                    <label for="fdato" class="fd">Fødselsdato
-                        <div class="fdato" id="fdato">
+                    <fieldset class="field">
+                        <legend>Fødselsdato</legend>
                             <input type="number" placeholder="DD" min="1" max="31">
                             <input type="number" placeholder="MM" min="1" max="12">
                             <input type="number" placeholder="ÅÅÅÅ" min="1890" max="2007">
-                        </div>
-                    </label>
-
-                    <label for="kjonn" class="kj">Kjønn
-                        <div class="kjonn-seksjon">
-                            <label for="kvinne">Kvinne
-                                <input type="checkbox" name="kvinne" id="kvinne">
+                    </fieldset>
+                    
+                    <fieldset class="field">
+                        <legend>Kjønn</legend>
+                            <label>Kvinne
+                                <input type="radio" name="kvinne">
                             </label>
-                            <label for="mann">Mann
-                                <input type="checkbox" name="mann" id="mann">
+                            <label>Mann
+                                <input type="radio" name="mann">
                             </label>
-                        </div>
-                    </label>
+                    </fieldset>
 
                 </fieldset>
-                <button>Siste trinn<i class="fa-solid fa-arrow-right"></i></button>
+                <button id="bestill">Siste trinn<i class="fa-solid fa-arrow-right"></i></button>
             </section>
         </main>
     </div>

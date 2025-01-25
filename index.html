@@ -20,13 +20,15 @@
                 <li class="mobile-only"><i class="fa-regular fa-circle-user"></i></li>
                 <li class="mobile-only"><i class="fa-solid fa-bars"></i></li>
                 <li class="desktop-only"><button class="header-button">Oprett en konto</button></li>
-                <li class="desktop-only"><button class="header-button"><i class="fa-regular fa-circle-user"></i> Min
-                        side</button>
+                <li class="desktop-only"><a href="order.html">
+                    <button class="header-button"><i class="fa-regular fa-circle-user"></i> Min
+                            side</button>
+                </a>
                 </li>
             </ul>
             <ul class="desktop-only flex gap1rem">
-                <li><a href="#">Tips og inspirasjon</a></li>
-                <li><a href="#">Hotell</a></li>
+                <li><a href="#tips-inspirasjon">Tips og inspirasjon</a></li>
+                <li><a href="hotell.html">Hotell</a></li>
                 <li><a href="#">Fly</a></li>
                 <li><a href="#">Kontakt</a></li>
             </ul>
@@ -38,7 +40,7 @@
     <div class="contaner forside">
         <div id="sea-image"></div>
         <main class="flex">
-            <section class="bestilling-form  box-shadow">
+            <section class="bestilling-form  box-shadow" id="sok">
                 <nav>
                     <ul class="flex gap1rem">
                         <li><a href="#" class="selected"><i class="fa-solid fa-suitcase"></i>Fly + Hotell</a></li>
@@ -99,7 +101,8 @@
                     <p>Fly + hotell, 7 dager</p>
                     <strong>Fra 3298,-</strong>
                 </article>
-                <button>Bestill idag</button>
+                <!-- jeg insipierte geek for geek sin html kode for å lenke knappen til lenke uten å bytte button tag til a tag -->
+                <a href="order.html"><button>Bestill idag</button></a>
             </section>
             <section class="tilbudseksjon grid gap1rem">
                 <article class="box-shadow">
@@ -118,7 +121,8 @@
                     <a href="#">Sikre deg et ferie kupp<i class="fa-solid fa-angles-right"></i></a>
                 </article>
             </section>
-            <section class="tips-inspirasjon grid">
+            <section class="tips-inspirasjon grid" id="tips-inspirasjon">
+                <h2>Tips &#38; Inspirasjon</h2>
                 <article class="box-shadow">
                     <figure>
                         <img src="./img/beach-6514331_640.jpg" alt="beach1">
@@ -129,7 +133,7 @@
                         Kalamata i Hellas. Gjelder avreise i sommer 2025. Kampanjen er gyldig i perioden 3/1-12/1-25.
                         Bruk rabattkode WEEKDEAL ved bestilling.
                     </p>
-                    <a href="#">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="hotell.html#sokeresultat">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
                 </article>
                 <article class="box-shadow">
                     <figure>
@@ -142,7 +146,7 @@
                         WEEKDEAL ved
                         bestilling.
                     </p>
-                    <a href="#">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="hotell.html#sokeresultat">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
                 </article>
                 <article class="box-shadow">
                     <figure>
@@ -155,7 +159,7 @@
                         WEEKDEAL ved
                         bestilling.
                     </p>
-                    <a href="#">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="hotell.html#sokeresultat">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
                 </article>
                 <article class="box-shadow">
                     <figure>
@@ -168,7 +172,7 @@
                         WEEKDEAL ved
                         bestilling.
                     </p>
-                    <a href="#">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="hotell.html#sokeresultat">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
                 </article>
                 <article class="box-shadow">
                     <figure>
@@ -182,7 +186,7 @@
                         WEEKDEAL ved
                         bestilling.
                     </p>
-                    <a href="#">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="hotell.html#sokeresultat">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
                 </article>
                 <article class="box-shadow">
                     <figure>
@@ -195,7 +199,7 @@
                         WEEKDEAL ved
                         bestilling.
                     </p>
-                    <a href="#">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="hotell.html#sokeresultat">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
                 </article>
             </section>
         </main>
