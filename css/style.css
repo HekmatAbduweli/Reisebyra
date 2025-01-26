@@ -124,6 +124,10 @@ header nav ul {
 header nav ul li i {
   font-size: 20px;
 }
+header nav ul li button {
+  font-size: 20px;
+  font-weight: 700;
+}
 
 main {
   max-width: 1000px;
@@ -150,6 +154,9 @@ main section {
   padding: 10px;
   border-radius: 10px;
 }
+.forside main .bestilling-form nav {
+  position: relative;
+}
 .forside main .bestilling-form nav ul {
   overflow: auto;
   white-space: nowrap;
@@ -161,6 +168,14 @@ main section {
 .forside main .bestilling-form nav ul li .selected {
   border-bottom: 3px solid var(--oceanblue);
 }
+.forside main .bestilling-form nav #arrow-mobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  background-color: #ffffff;
+  -webkit-mask-image: linear-gradient(270deg, black 50%, transparent);
+}
 .forside main .bestilling-form form {
   flex-direction: column;
   gap: 10px;
@@ -171,6 +186,13 @@ main section {
   width: 100%;
   font-size: 20px;
   color: gray;
+}
+.forside main .bestilling-form form .colum {
+  width: 100%;
+  justify-content: space-between;
+}
+.forside main .bestilling-form form .colum fieldset {
+  width: 100%;
 }
 .forside main .bestilling-form form button {
   width: 100%;
@@ -224,6 +246,9 @@ main section {
   height: 150px;
   padding: 15px;
   border-radius: 10px;
+}
+.forside main .tilbudseksjon article a {
+  color: var(--oceanblue);
 }
 .forside main .tips-inspirasjon {
   width: 90%;
@@ -596,14 +621,21 @@ footer .sosialemedier ul li a i {
   .forside main .bestilling-form {
     margin: -80px auto 20px;
   }
+  .forside main .bestilling-form nav {
+    margin: 10px 0;
+  }
+  .forside main .bestilling-form nav #arrow-mobile {
+    display: none;
+  }
   .forside main .bestilling-form form {
-    flex-direction: row;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
   }
   .forside main .bestilling-form form fieldset {
-    border-radius: 10px;
+    border-radius: 20px;
   }
-  .forside main .bestilling-form form fieldset input[type=number],
-  .forside main .bestilling-form form fieldset [type=date] {
+  .forside main .bestilling-form form fieldset input[type=number] {
     width: 150px;
   }
   .forside main .bestilling-form form .colum {
@@ -717,6 +749,7 @@ footer .sosialemedier ul li a i {
     display: none;
   }
   .betalingsside main .valgte-hotell article {
+    padding: 20px;
     display: block;
   }
   .betalingsside main .opplysninger {

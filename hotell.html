@@ -17,24 +17,28 @@
         <nav>
             <ul class="flex gap1rem">
                 <li><i class="fa-solid fa-magnifying-glass"></i></li>
-                <li class="mobile-only"><i class="fa-regular fa-circle-user"></i></li>
+                <li class="mobile-only"><a href="order.html"><i class="fa-regular fa-circle-user"></i></a></li>
                 <li class="mobile-only"><i class="fa-solid fa-bars"></i></li>
                 <li class="desktop-only"><button class="header-button">Oprett en konto</button></li>
-                <li class="desktop-only"><button class="header-button"><i class="fa-regular fa-circle-user"></i> Min
-                        side</button>
+                <li class="desktop-only"><a href="order.html">
+                        <button class="header-button"><i class="fa-regular fa-circle-user"></i> Min
+                            side</button>
+                    </a>
                 </li>
             </ul>
             <ul class="desktop-only flex gap1rem">
-                <li><a href="#">Tips og inspirasjon</a></li>
-                <li><a href="#">Hotell</a></li>
-                <li><a href="#">Fly</a></li>
-                <li><a href="#">Kontakt</a></li>
+                <li><a href="index.html#tips-inspirasjon">Tips og inspirasjon</a></li>
+                <li><a href="hotell.html">Hotell</a></li>
+                <li><a href="https://www.norwegian.no/">Fly</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
             </ul>
         </nav>
     </header>
+    <!-- her bruker jeg div tag ellers når bretten til websiden blir mindre bil main seksjon ikke liten sammen med bretten til websiden -->
     <div class="hotellside">
         <main id="sokeresultat">
             <section class="image-gallery">
+                <!-- her brukte jeg div tag for å gruppere bilder -->
                 <div class="images">
                     <figure class="big-image1">
                         <img src="./img/landscape-2016308_640.jpg" alt="bildet til pool">
