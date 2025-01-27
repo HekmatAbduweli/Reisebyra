@@ -14,6 +14,8 @@
 
 * {
   font-family: "Montserrat", serif;
+  src: url(../fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf)
+    format(truetype);
   //spurte chatgpt hvordan kan jeg unngå å overflyte header og reklameskilt og chatgpt ambefalte bo-sizing border-box
   box-sizing: border-box;
 }
@@ -142,7 +144,7 @@ header {
   }
 }
 
-main {
+.snail {
   max-width: 1000px;
   margin: auto;
   justify-content: center;
@@ -152,8 +154,8 @@ main {
   }
 }
 
-//for forside
-.forside {
+main {
+  //for forside
   #sea-image {
     width: 100%;
     height: 300px;
@@ -162,7 +164,7 @@ main {
     object-fit: cover;
     background-position: 30% 30%;
   }
-  main {
+  .forside {
     .bestilling-form {
       background-color: white;
       width: 90%;
@@ -279,7 +281,7 @@ main {
       width: 90%;
       margin: 20px auto;
       //glemte å rapportere før jeg pusherut, men her brukte jeg grid youtube video til å vite hvordan kan jeg sette artikkelen til ny kolonne av seg selv når bretten til websiden blir mindre.(jeg hadde sett helevideo før jeg har startet denne oppgaven så jeg viste at det finnes tutorial på denne videoen )
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: 1fr;
       grid-template-rows: auto 1fr 1fr;
       gap: 1rem 1rem;
       article {
@@ -316,11 +318,9 @@ main {
       }
     }
   }
-}
 
-//hotellside
-.hotellside {
-  main {
+  //hotellside
+  .hotellside {
     //jeg insipierte fra oblig 3 nettside jeg lagde du kan se via å scrolle på side sko bildene
     .image-gallery {
       position: relative;
@@ -392,7 +392,6 @@ main {
         right: 0;
       }
     }
-
     .navigasjon {
       nav {
         margin-top: 10px;
@@ -475,11 +474,9 @@ main {
       }
     }
   }
-}
 
-//for bestillingsside
-.betalingsside {
-  main {
+  //for bestillingsside
+  .betalingsside {
     nav {
       ul {
         background-color: var(--oceanblue);
@@ -507,7 +504,6 @@ main {
         }
       }
     }
-
     .valgte-hotell {
       border-radius: 10px;
       //henta fra index.html da det var på nettsiden når jeg insipierte. fordi jeg slita meg å finne fra sass koden
@@ -701,16 +697,18 @@ footer {
     }
   }
 
-  main {
+  .snail {
     max-width: 1400px;
   }
 
-  .forside {
+  main {
     #sea-image {
       height: 150px;
     }
-    main {
+    //forside
+    .forside {
       .bestilling-form {
+        width: 100%;
         margin: -80px auto 20px;
         nav {
           margin: 10px 0;
@@ -761,10 +759,9 @@ footer {
         }
       }
     }
-  }
 
-  .hotellside {
-    main {
+    //hotellside
+    .hotellside {
       .image-gallery {
         .images {
           //her insipirerte fra gird video fra youtube
@@ -835,10 +832,9 @@ footer {
         }
       }
     }
-  }
 
-  .betalingsside {
-    main {
+    //betalingsside
+    .betalingsside {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto;

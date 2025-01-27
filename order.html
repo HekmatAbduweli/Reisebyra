@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/a45519f1c1.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Kasse</title>
 </head>
 
 <body>
@@ -20,10 +20,9 @@
                 <li class="mobile-only"><a href="order.html"><i class="fa-regular fa-circle-user"></i></a></li>
                 <li class="mobile-only"><i class="fa-solid fa-bars"></i></li>
                 <li class="desktop-only"><button class="header-button">Oprett en konto</button></li>
-                <li class="desktop-only"><a href="order.html">
-                        <button class="header-button"><i class="fa-regular fa-circle-user"></i> Min
-                            side</button>
-                    </a>
+                <li class="desktop-only"><button class="header-button" onclick="location.href='order.html'"><i
+                            class="fa-regular fa-circle-user"></i> Min
+                        side</button>
                 </li>
             </ul>
             <ul class="desktop-only flex gap1rem">
@@ -34,9 +33,9 @@
             </ul>
         </nav>
     </header>
-    <!-- her bruker jeg div tag ellers når bretten til websiden blir mindre bil main seksjon ikke liten sammen med bretten til websiden -->
-    <div class="betalingsside">
-        <main class="flex">
+    <main>
+        <!-- her bruker jeg div til å begrense bretten til 1000px på mobil og 1400px på desktopversjon -->
+        <div class="flex betalingsside snail">
             <nav>
                 <ul class="flex gap1rem">
                     <li><a href="index.html#sok">Søk</a><i class="fa-solid fa-angle-right"></i></li>
@@ -45,7 +44,7 @@
                     <li><a href="hotell.html#velg-rom">Romtype</a><i class="fa-solid fa-angle-right"></i></li>
                     <li><a href="https://www.norwegian.no/">Fly</a><i class="fa-solid fa-angle-right"></i></li>
                     <li><a href="#">Tillegg</a><i class="fa-solid fa-angle-right"></i></li>
-                    <li><a href="#"><strong>Opplysninger</strong></a><i class="fa-solid fa-angle-right"></i></li>
+                    <li><a href="order.html"><strong>Opplysninger</strong></a><i class="fa-solid fa-angle-right"></i></li>
                     <li><a href="#bestill">Bestill</a></li>
                 </ul>
             </nav>
@@ -407,8 +406,8 @@
                 </fieldset>
                 <button id="bestill">Siste trinn<i class="fa-solid fa-arrow-right"></i></button>
             </section>
-        </main>
-    </div>
+        </div>
+    </main>
 
     <footer class="grid">
         <section class="flagg-seksjon flex item1">
@@ -446,20 +445,22 @@
         <section class="kundeservice item4">
             <h3>Kundeservice</h3>
             <ul>
-                <li><a href="#">Spørsmål og svar</a></li>
-                <li><a href="#">Chat</a></li>
-                <li><a href="#">Kontakt</a></li>
-                <li><a href="#">Tilgjengelihets</a></li>
+                <li><a href="#qa">Spørsmål og svar</a></li>
+                <li><a href="#chat">Chat</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+                <li><a
+                        href="./mal–wcag-sjekkliste_for_utfylling_av_tilgjengelighetserklering_for_nettlosning.pdf">Tilgjengelihetsærklaing</a>
+                </li>
             </ul>
         </section>
         <section class="sosialemedier item5">
             <h3>Sociale medier</h3>
             <ul class="flex gap1rem">
-                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="#instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
+                <li><a href="#facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#bantiktok"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="#youtube"><i class="fa-brands fa-youtube"></i></a></li>
             </ul>
         </section>
     </footer>
