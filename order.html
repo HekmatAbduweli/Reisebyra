@@ -19,7 +19,7 @@
                 <li><i class="fa-solid fa-magnifying-glass"></i></li>
                 <li class="mobile-only"><a href="order.html"><i class="fa-regular fa-circle-user"></i></a></li>
                 <li class="mobile-only"><i class="fa-solid fa-bars"></i></li>
-                <li class="desktop-only"><button class="header-button">Oprett en konto</button></li>
+                <li class="desktop-only"><button class="header-button" onclick="location.href='#oprettkonto'">Oprett en konto</button></li>
                 <li class="desktop-only"><button class="header-button" onclick="location.href='order.html'"><i
                             class="fa-regular fa-circle-user"></i> Min
                         side</button>
@@ -73,8 +73,8 @@
                     <p><i class="fa-solid fa-bed"></i>Deluxerom, Balkong og ikke spesifisert utsikt.</p>
                     <p><i class="fa-solid fa-utensils"></i>Frokostbuffe</p>
                     <p><i class="fa-solid fa-plane-departure"></i>Oslo lufthavn - Preveza</p>
-                    <p>22 003,-</p>
-                    <p>19 893,-</p>
+                    <p class="before-discount">22 003,-</p>
+                    <p class="after-discount">19 893,-</p>
                 </article>
             </section>
             <section class="opplysninger">
@@ -409,7 +409,7 @@
         </div>
     </main>
 
-    <footer class="grid">
+    <footer class="grid" id="kontakt">
         <section class="flagg-seksjon flex item1">
             <ul class="flex">
                 <li><img src="./flags/sweden.png" alt="Sverige"><span>Sverige</span></li>
@@ -440,7 +440,7 @@
                     <input type="email" placeholder="example@mail.com"><input type="submit" value="Send">
                 </fieldset>
             </form>
-            <p>Kjøp gavekort</p>
+            <a href="https://www.ticket.no/gavekort">Kjøp reisegavekort</a>
         </section>
         <section class="kundeservice item4">
             <h3>Kundeservice</h3>
@@ -456,11 +456,11 @@
         <section class="sosialemedier item5">
             <h3>Sociale medier</h3>
             <ul class="flex gap1rem">
-                <li><a href="#instagram"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="#pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
-                <li><a href="#facebook"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="#bantiktok"><i class="fa-brands fa-tiktok"></i></a></li>
-                <li><a href="#youtube"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest"></i></a></li>
+                <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.tiktok.com/en/" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
             </ul>
         </section>
     </footer>

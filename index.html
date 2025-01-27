@@ -16,10 +16,11 @@
         </a>
         <nav>
             <ul class="flex gap1rem">
-                <li><i class="fa-solid fa-magnifying-glass" aria-label="magnifying glass"></i></li>
+                <li><i class="fa-solid fa-magnifying-glass"></i></li>
                 <li class="mobile-only"><a href="order.html"><i class="fa-regular fa-circle-user"></i></a></li>
                 <li class="mobile-only"><i class="fa-solid fa-bars"></i></li>
-                <li class="desktop-only"><button class="header-button">Oprett en konto</button></li>
+                <li class="desktop-only"><button onclick="location.href='#oprettkonto'" class="header-button">Oprett en
+                        konto</button></li>
                 <li class="desktop-only">
                     <!-- fant ut at å bruke button inne i a taggen er ulovlig så søkte jeg link inside button og fant løsning fra nettside kalt sentry -->
                     <button class="header-button" onclick="location.href='order.html'"><i
@@ -102,7 +103,7 @@
 
             <section class="reklameskilt flex">
                 <article>
-                    <h1>Bestill sommerens beste uke</h1>
+                    <h2>Bestill sommerens beste uke</h2>
                     <p>Fly + hotell, 7 dager</p>
                     <strong>Fra 3298,-</strong>
                 </article>
@@ -123,7 +124,7 @@
                     <a href="#">Sikre deg et ferie kupp<i class="fa-solid fa-angles-right"></i></a>
                 </article>
             </section>
-            <section class="tips-inspirasjon grid" id="tips-inspirasjon">
+            <section class="tips-inspirasjon flex" id="tips-inspirasjon">
                 <h2>Tips &#38; Inspirasjon</h2>
                 <article class="box-shadow">
                     <figure>
@@ -139,69 +140,54 @@
                 </article>
                 <article class="box-shadow">
                     <figure>
-                        <img src="./img/beach-6514331_640.jpg" alt="beach2">
+                        <img src="./img/beach-1836467_640.jpg" alt="beach2">
                     </figure>
-                    <h3>Greske favoritter</h3>
-                    <p>Akkuratt nå får du 1000,- i rabatt per bestilling til bl.a Parga, Sivota, Lefkas, Korfu og
-                        Kalamata i Hellas.
-                        Gjelder avreise i sommer 2025. Kampanjen er gyldig i perioden 3/1-12/1-25. Bruk rabattkode
-                        WEEKDEAL ved
-                        bestilling.
+                    <h3>Solskinnspriser - Bestill i dag!</h3>
+                    <p>Spar opp til 45%. Akkuratt nå tilbyr vi billige vinterreise til mange reisemål. Bestill vinterens
+                        herligste uke i dag!
                     </p>
-                    <a href="hotell.html#sokeresultat">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="hotell.html#sokeresultat">Fra kr 3203 <i class="fa-solid fa-arrow-right"></i></a>
                 </article>
                 <article class="box-shadow">
                     <figure>
-                        <img src="./img/beach-6514331_640.jpg" alt="beach1">
+                        <img src="./img/cathedral-427997_640.jpg" alt="storby">
                     </figure>
-                    <h3>Greske favoritter</h3>
-                    <p>Akkuratt nå får du 1000,- i rabatt per bestilling til bl.a Parga, Sivota, Lefkas, Korfu og
-                        Kalamata i Hellas.
-                        Gjelder avreise i sommer 2025. Kampanjen er gyldig i perioden 3/1-12/1-25. Bruk rabattkode
-                        WEEKDEAL ved
-                        bestilling.
+                    <h3>Storbyferie</h3>
+                    <p>Bestill en langhelg og unn deg en flott weekendreise i em storby der du selv velge en
+                        reiselengde, fly og nøye utvalgte hotell.
                     </p>
-                    <a href="hotell.html#sokeresultat">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="hotell.html#sokeresultat">Les mer <i class="fa-solid fa-arrow-right"></i></a>
                 </article>
                 <article class="box-shadow">
                     <figure>
-                        <img src="./img/beach-6514331_640.jpg" alt="beach1">
+                        <img src="./img/building-7014904_640.jpg" alt="london">
                     </figure>
-                    <h3>Greske favoritter</h3>
-                    <p>Akkuratt nå får du 1000,- i rabatt per bestilling til bl.a Parga, Sivota, Lefkas, Korfu og
-                        Kalamata i Hellas.
-                        Gjelder avreise i sommer 2025. Kampanjen er gyldig i perioden 3/1-12/1-25. Bruk rabattkode
-                        WEEKDEAL ved
-                        bestilling.
+                    <h3>Besøk påskefavoritten London</h3>
+                    <p>London er en av de mest populære reisemålene i påsken, kjent for sin ulike blanding av historie,
+                        kultur og moderne opplevelser.
                     </p>
-                    <a href="hotell.html#sokeresultat">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="hotell.html#sokeresultat">Fra kr 2150 <i class="fa-solid fa-arrow-right"></i></a>
                 </article>
                 <article class="box-shadow">
                     <figure>
-                        <img src="./img/beach-6514331_640.jpg" alt="beach1">
+                        <img src="./img/ski-slope-3223709_640.jpg" alt="ski">
                         <span>Ukens Deal</span>
                     </figure>
-                    <h3>Greske favoritter</h3>
-                    <p>Akkuratt nå får du 1000,- i rabatt per bestilling til bl.a Parga, Sivota, Lefkas, Korfu og
-                        Kalamata i Hellas.
-                        Gjelder avreise i sommer 2025. Kampanjen er gyldig i perioden 3/1-12/1-25. Bruk rabattkode
-                        WEEKDEAL ved
-                        bestilling.
+                    <h3>Ski ferie</h3>
+                    <p>Drømmer du å puddesnø, frisk fjell og fartfylte nedfarter? Vinteren er endelig her, og det betyr
+                        skisesongen er full i gnag!
                     </p>
-                    <a href="hotell.html#sokeresultat">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="hotell.html#sokeresultat">Se alle skistedene <i class="fa-solid fa-arrow-right"></i></a>
                 </article>
                 <article class="box-shadow">
                     <figure>
-                        <img src="./img/beach-6514331_640.jpg" alt="beach1">
+                        <img src="./img/beach-666122_640.jpg" alt="house on beach">
                     </figure>
-                    <h3>Greske favoritter</h3>
-                    <p>Akkuratt nå får du 1000,- i rabatt per bestilling til bl.a Parga, Sivota, Lefkas, Korfu og
-                        Kalamata i Hellas.
-                        Gjelder avreise i sommer 2025. Kampanjen er gyldig i perioden 3/1-12/1-25. Bruk rabattkode
-                        WEEKDEAL ved
-                        bestilling.
+                    <h3>Spar opptil 7000,- </h3>
+                    <p>Drømmer du å solflyte dager og eksotiske opplevelser? Nå har du sjansem til å sikre deg din
+                        drømmeferie til en fantastisk pris
                     </p>
-                    <a href="hotell.html#sokeresultat">Fra kr 3970 <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="hotell.html#sokeresultat">Les mer<i class="fa-solid fa-arrow-right"></i></a>
                 </article>
             </section>
         </div>
@@ -211,7 +197,7 @@
 
 
 
-    <footer class="grid">
+    <footer class="grid" id="kontakt">
         <section class="flagg-seksjon flex item1">
             <ul class="flex">
                 <li><img src="./flags/sweden.png" alt="Sverige"><span>Sverige</span></li>
@@ -242,7 +228,7 @@
                     <input type="email" placeholder="example@mail.com"><input type="submit" value="Send">
                 </fieldset>
             </form>
-            <p>Kjøp gavekort</p>
+            <a href="https://www.ticket.no/gavekort">Kjøp reisegavekort</a>
         </section>
         <section class="kundeservice item4">
             <h3>Kundeservice</h3>
@@ -258,11 +244,12 @@
         <section class="sosialemedier item5">
             <h3>Sociale medier</h3>
             <ul class="flex gap1rem">
-                <li><a href="#instagram"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="#pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
-                <li><a href="#facebook"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="#bantiktok"><i class="fa-brands fa-tiktok"></i></a></li>
-                <li><a href="#youtube"><i class="fa-brands fa-youtube"></i></a></li>
+                <!-- jeg brukte freecodecamp for å finne ut hvordan man åpner lenken på ny fane -->
+                <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest"></i></a></li>
+                <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.tiktok.com/en/" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
             </ul>
         </section>
     </footer>
