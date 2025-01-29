@@ -247,12 +247,12 @@ main {
         //søkte "border radius only top" og fant løsning i stackoverflow
         -moz-border-radius: 0px;
         -webkit-border-radius: 0px 10px;
-        border-radius: 0px 10px;
+        border-radius: 0px 30px;
         padding: 20px;
         margin: 10px 0;
         display: inline-block;
         strong {
-          font-size: 30px;
+          font-size: 40px;
           font-weight: 800;
         }
       }
@@ -751,7 +751,7 @@ footer {
           display: grid;
           grid-template-columns: repeat(5, 1fr);
           fieldset {
-            border-radius: 20px;
+            border-radius: 10px;
             input[type="number"] {
               width: 150px;
             }
@@ -765,7 +765,7 @@ footer {
             }
           }
           button {
-            width: 300px;
+            max-width: 300px;
           }
         }
       }

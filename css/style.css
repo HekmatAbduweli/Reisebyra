@@ -219,13 +219,13 @@ main .forside .reklameskilt {
 main .forside .reklameskilt article {
   width: 100%;
   background-color: var(--lightblue);
-  border-radius: 0px 10px;
+  border-radius: 0px 30px;
   padding: 20px;
   margin: 10px 0;
   display: inline-block;
 }
 main .forside .reklameskilt article strong {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 800;
 }
 main .forside .reklameskilt button {
@@ -663,7 +663,7 @@ footer .sosialemedier ul li a i {
     grid-template-columns: repeat(5, 1fr);
   }
   main .forside .bestilling-form form fieldset {
-    border-radius: 20px;
+    border-radius: 10px;
   }
   main .forside .bestilling-form form fieldset input[type=number] {
     width: 150px;
@@ -675,7 +675,7 @@ footer .sosialemedier ul li a i {
     width: 200px;
   }
   main .forside .bestilling-form form button {
-    width: 300px;
+    max-width: 300px;
   }
   main .forside .reklameskilt {
     background-position: 50%;
