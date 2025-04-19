@@ -1,2 +1,3 @@
 # konte_eksamen_web
-konte eksamen for webutvikling.
+Eksamen for webutvikling.
+Lage et nettside som har hjemside, produktside og checkoutside ved bruk av Html og Css.
